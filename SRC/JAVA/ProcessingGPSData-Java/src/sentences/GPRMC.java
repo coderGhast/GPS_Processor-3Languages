@@ -5,31 +5,55 @@ package sentences;
  */
 public class GPRMC {
 
-    private GPSTime time;
+    private String time;
+    private String date;
     private String status;
     private String latitude;
     private String longitude;
 
     public GPRMC(String[] sentenceComponents) {
-        setTime(sentenceComponents[1], sentenceComponents[9]);
+        setTime(sentenceComponents[1]);
+        setDate(sentenceComponents[9]);
         setStatus(sentenceComponents[2]);
         setLatitude(sentenceComponents[3], sentenceComponents[4].charAt(0));
         setLongitude(sentenceComponents[5], sentenceComponents[6].charAt(0));
     }
 
-    public GPSTime getTime() {
-        return time;
+    public String getTime() {
+        return appendDate(date) + appendTime(time);
     }
 
-    public void setTime(String stringTime, String stringDate) {
-        time = new GPSTime();
-        time.setHours(Integer.parseInt(stringTime.substring(0,2)));
-        time.setMinutes(Integer.parseInt(stringTime.substring(2, 4)));
-        time.setSeconds(Integer.parseInt(stringTime.substring(4,6)));
+    public void setTime(String stringTime) {
+        time = stringTime;
+    }
 
-        time.setDay(Integer.parseInt(stringDate.substring(0,2)));
-        time.setMonth(Integer.parseInt(stringDate.substring(2,4)));
-        time.setYear(Integer.parseInt(stringDate.substring(4,6)));
+    public void setDate(String stringDate){
+        date = stringDate;
+    }
+
+    private String appendDate(String stringDate){
+        StringBuilder sb = new StringBuilder();
+        sb.append(20);
+        sb.append(stringDate.substring(4, 6));
+        sb.append("-");
+        sb.append(stringDate.substring(2, 4));
+        sb.append("-");
+        sb.append(stringDate.substring(0, 2));
+
+        return sb.toString();
+    }
+
+    private String appendTime(String stringTime){
+        StringBuilder sb = new StringBuilder();
+        sb.append("T");
+        sb.append(stringTime.substring(0,2));
+        sb.append(":");
+        sb.append(stringTime.substring(2,4));
+        sb.append(":");
+        sb.append(stringTime.substring(4,6));
+        sb.append("Z");
+
+        return sb.toString();
     }
 
     public String getStatus() {
@@ -45,11 +69,15 @@ public class GPRMC {
     }
 
     public void setLatitude(String stringLatitude, char compass) {
-        double tempLat = Double.parseDouble(stringLatitude);
-        if(compass == 'S'){
-            tempLat *= -1;
+        StringBuffer latString = new StringBuffer(stringLatitude);
+        int periodIndex = latString.indexOf(".");
+        latString = latString.deleteCharAt(periodIndex);
+        latString.insert(periodIndex - 2, ".");
+
+        if (compass == 'S') {
+            latString.insert(0, "-");
         }
-        latitude = String.valueOf(tempLat);
+        latitude = latString.toString();
     }
 
     public String getLongitude() {
@@ -57,10 +85,14 @@ public class GPRMC {
     }
 
     public void setLongitude(String stringLongitude, char compass) {
-        double tempLng = Double.parseDouble(stringLongitude);
-        if(compass == 'W'){
-            tempLng *= -1;
+        StringBuffer longString = new StringBuffer(stringLongitude);
+        int periodIndex = longString.indexOf(".");
+        longString = longString.deleteCharAt(periodIndex);
+        longString.insert(periodIndex - 2, ".");
+
+        if (compass == 'W') {
+            longString.insert(0, "-");
         }
-        longitude = String.valueOf(tempLng);
+        longitude = longString.toString();
     }
 }

@@ -6,6 +6,16 @@ import sentences.*;
  */
 public class SentenceHandler {
 
+    private String date_and_time = null;
+    private String elevation;
+    private String latitude;
+    private String longitude;
+    private double latitude_offset;
+    private double longitude_offset;
+
+    private GPGSA gpgsa = null;
+    private GPRMC gprmc = null;
+
     protected void parse(String currentSentence){
         deconstructSentence(currentSentence);
     }
@@ -16,11 +26,11 @@ public class SentenceHandler {
 
         switch(sentenceType){
             case(1):
-                GPGSA gpgsa = new GPGSA(sentenceComponents);
+                gpgsa = new GPGSA(sentenceComponents);
                 break;
             case(2):
-                GPRMC gprmc = new GPRMC(sentenceComponents);
-                printData(gprmc);
+                gprmc = new GPRMC(sentenceComponents);
+                setDate_and_time(gprmc.getTime());
                 break;
             case(3):
                 GPGGA gpgga = new GPGGA(sentenceComponents);
@@ -61,10 +71,55 @@ public class SentenceHandler {
 
 
     private void printData(GPRMC gprmc){
-        GPSTime tempTime = gprmc.getTime();
-        System.out.println("============");
-        System.out.println(tempTime.getDay() + "-" + tempTime.getMonth() + "-" + tempTime.getYear());
-        System.out.println(tempTime.getHours() + ":" + tempTime.getMinutes() + ":" + tempTime.getSeconds());
+        System.out.println(gprmc.getTime());
         System.out.println(gprmc.getLatitude() + ", " + gprmc.getLongitude());
+    }
+
+    public String getDate_and_time() {
+        return date_and_time;
+    }
+
+    public void setDate_and_time(String date_and_time) {
+        this.date_and_time = date_and_time;
+    }
+
+    public String getElevation() {
+        return elevation;
+    }
+
+    public void setElevation(String elevation) {
+        this.elevation = elevation;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude_offset() {
+        return latitude_offset;
+    }
+
+    public void setLatitude_offset(double latitude_offset) {
+        this.latitude_offset = latitude_offset;
+    }
+
+    public double getLongitude_offset() {
+        return longitude_offset;
+    }
+
+    public void setLongitude_offset(double longitude_offset) {
+        this.longitude_offset = longitude_offset;
     }
 }

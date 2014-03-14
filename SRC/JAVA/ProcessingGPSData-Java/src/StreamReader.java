@@ -6,13 +6,13 @@ import java.io.IOException;
 /**
  * Created by jee22 on 05/03/14.
  */
-public class FileHandler {
+public class StreamReader {
 
     private int numLines = 1;
     private FileReader reader;
     private BufferedReader textReader;
 
-    public FileHandler(String fileName){
+    public StreamReader(String fileName){
         try {
             reader = new FileReader(fileName);
             textReader = new BufferedReader(reader);
@@ -33,4 +33,12 @@ public class FileHandler {
         return currentSentence;
     }
 
+    protected void closeStream(){
+        try {
+            reader.close();
+            textReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
