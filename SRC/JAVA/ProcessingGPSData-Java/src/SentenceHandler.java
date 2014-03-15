@@ -31,7 +31,9 @@ public class SentenceHandler {
                 break;
             case(2):
                 gprmc = new GPRMC(sentenceComponents);
-                setDate_and_time(gprmc.getTime());
+                setDate_and_time(gprmc.getDate_and_timeTime());
+                setLatitude(gprmc.getLatitude());
+                setLongitude(gprmc.getLongitude());
                 break;
             case(3):
                 GPGGA gpgga = new GPGGA(sentenceComponents);
@@ -72,7 +74,7 @@ public class SentenceHandler {
 
 
     private void printData(GPRMC gprmc){
-        System.out.println(gprmc.getTime());
+        System.out.println(gprmc.getDate_and_timeTime());
         System.out.println(gprmc.getLatitude() + ", " + gprmc.getLongitude());
     }
 

@@ -70,18 +70,14 @@ public class DateAndTime implements Comparable {
         } else if(comTemp.getDate() > this.getDate()){
             result = -1;
         } else {
-            System.out.println("Date the same");
             if(comTemp.getTime() < this.getTime()){
                 result = 1;
             } else if (comTemp.getTime() > this.getTime()){
                 result = -1;
             } else {
-                System.out.println("Time the same");
                 result = 0;
             }
         }
-
-
         return result;
     }
 

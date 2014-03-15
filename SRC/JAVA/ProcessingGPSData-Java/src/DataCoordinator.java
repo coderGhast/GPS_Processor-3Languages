@@ -28,8 +28,8 @@ public class DataCoordinator {
 
     /**
      * TODO:
-     * 1. Make Date/Time comparable (just get on with it..)
-     * 2. Write conditional for comparing the date/time, and how
+     * 1. (DONE) Make Date/Time comparable (just get on with it..)
+     * 2. (DONE) Write conditional for comparing the date/time, and how
      * to handle the case of stream one ahead or behind the stream
      * 3. Assign all data from the Stream (1) to variables.
      * 4. Start checking the validity and integrity of those variables each second
@@ -85,7 +85,7 @@ public class DataCoordinator {
                 if (secondary_sentence != null) {
                     System.out.println("S2. " + secondary_sentence_handler.getDate_and_time());
                     secondary_sentence_handler.parse(secondary_sentence);
-
+                    System.out.println(secondary_sentence_handler.getLatitude());
                 }
                 secondary_sentence = secondary_stream.getNextSentence();
             }
