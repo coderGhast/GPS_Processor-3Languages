@@ -3,7 +3,7 @@ package sentences;
 /**
  * Created by jee22 on 05/03/14.
  */
-public class GPGSA {
+public class GPGSA extends GenericSentence {
 
     private String fixSelection;
     private int fixType;

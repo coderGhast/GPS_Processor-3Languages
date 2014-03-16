@@ -11,11 +11,11 @@ public class SentenceHandler {
     private String elevation;
     private String latitude;
     private String longitude;
+    private int currentFix;
+    private boolean good_signal;
     private double latitude_offset;
     private double longitude_offset;
 
-    private GPGSA gpgsa = null;
-    private GPRMC gprmc = null;
 
     protected void parse(String currentSentence){
         deconstructSentence(currentSentence);
@@ -24,28 +24,52 @@ public class SentenceHandler {
     private void deconstructSentence(String sentence){
         String[] sentenceComponents = sentence.split(",");
         int sentenceType = determineType(sentenceComponents[0]);
+        GenericSentence current_sentence;
 
         switch(sentenceType){
             case(1):
-                gpgsa = new GPGSA(sentenceComponents);
+                GPGSA gpgsa = new GPGSA(sentenceComponents);
+                setCurrentFix(gpgsa.getFixType());
                 break;
             case(2):
-                gprmc = new GPRMC(sentenceComponents);
-                setDate_and_time(gprmc.getDate_and_timeTime());
-                setLatitude(gprmc.getLatitude());
-                setLongitude(gprmc.getLongitude());
+                current_sentence = new GPRMC(sentenceComponents);
+                if(this.getDate_and_time() == null){
+                    setDate_and_time(current_sentence.getDate_and_time());
+                } else if(this.getDate_and_time().compareTo(current_sentence.getDate_and_time()) != 0){
+                    setDate_and_time(current_sentence.getDate_and_time());
+                }
+                if(this.getLatitude() != current_sentence.getLatitude()){
+                    setLatitude(current_sentence.getLatitude());
+                }
+                if(this.getLongitude() != current_sentence.getLongitude()){
+                    setLongitude(current_sentence.getLongitude());
+                }
                 break;
             case(3):
-                GPGGA gpgga = new GPGGA(sentenceComponents);
+                if(this.getDate_and_time() == null){
+                    current_sentence = new GPGGA(sentenceComponents, null);
+                } else {
+                    current_sentence = new GPGGA(sentenceComponents, String.valueOf(this.getDate_and_time().getDate()));
+                    if(this.getDate_and_time().compareTo(current_sentence.getDate_and_time()) != 0){
+                        setDate_and_time(current_sentence.getDate_and_time());
+                    }
+                }
+
+                if(this.getLatitude() != current_sentence.getLatitude()){
+                    this.setLatitude(current_sentence.getLatitude());
+                }
+                if(this.getLongitude() != current_sentence.getLongitude()){
+                    this.setLongitude(current_sentence.getLongitude());
+                }
                 break;
             case(4):
-                GPGSV gpgsv = new GPGSV(sentenceComponents);
+                current_sentence = new GPGSV(sentenceComponents);
                 break;
             case(5):
-                GPZDA gpzda = new GPZDA(sentenceComponents);
+                current_sentence = new GPZDA(sentenceComponents);
                 break;
             case(6):
-                GPGBS gpgbs = new GPGBS(sentenceComponents);
+                current_sentence = new GPGBS(sentenceComponents);
                 break;
             default:;
         }
@@ -70,12 +94,6 @@ public class SentenceHandler {
             System.out.println("Sentence type: " +  sentenceSignifier + " is not handled by this application.");
         }
         return sentenceType;
-    }
-
-
-    private void printData(GPRMC gprmc){
-        System.out.println(gprmc.getDate_and_timeTime());
-        System.out.println(gprmc.getLatitude() + ", " + gprmc.getLongitude());
     }
 
     public DateAndTime getDate_and_time() {
@@ -109,6 +127,14 @@ public class SentenceHandler {
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;
+    }
+
+    public int getCurrentFix(){
+        return currentFix;
+    }
+
+    public void setCurrentFix(int currentFix){
+        this.currentFix = currentFix;
     }
 
     public double getLatitude_offset() {

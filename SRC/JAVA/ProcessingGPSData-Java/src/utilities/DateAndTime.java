@@ -9,8 +9,12 @@ public class DateAndTime implements Comparable {
     private double time;
 
     public DateAndTime(String time, String date){
-        this.date = convertString(date);
-        this.time = convertString(time);
+        if(date != null){
+            this.date = convertString(date);
+        }
+        if(time != null){
+            this.time = convertString(time);
+        }
     }
 
 

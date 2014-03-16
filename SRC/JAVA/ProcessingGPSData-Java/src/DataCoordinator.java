@@ -61,7 +61,7 @@ public class DataCoordinator {
         while (primary_sentence != null) {
 
             if (primary_sentence_handler.getDate_and_time().compareTo(secondary_sentence_handler.getDate_and_time()) < 0) {
-                System.out.println("S1 Less than S2. \n" + primary_sentence_handler.getDate_and_time() + " \n" + secondary_sentence_handler.getDate_and_time());
+                //System.out.println("S1 Less than S2. \n" + primary_sentence_handler.getDate_and_time() + " \n" + secondary_sentence_handler.getDate_and_time());
                 primary_sentence = primary_stream.getNextSentence();
                 if (primary_sentence != null) {
                     primary_sentence_handler.parse(primary_sentence);
@@ -78,6 +78,7 @@ public class DataCoordinator {
                     System.out.println("S1. " + primary_sentence_handler.getDate_and_time());
                     primary_sentence_handler.parse(primary_sentence);
 
+                    //System.out.println("S1 Latitude: " + primary_sentence_handler.getLatitude());
                 }
                 primary_sentence = primary_stream.getNextSentence();
 
@@ -85,7 +86,8 @@ public class DataCoordinator {
                 if (secondary_sentence != null) {
                     System.out.println("S2. " + secondary_sentence_handler.getDate_and_time());
                     secondary_sentence_handler.parse(secondary_sentence);
-                    System.out.println(secondary_sentence_handler.getLatitude());
+
+                    //System.out.println("S2 Latitude: " + secondary_sentence_handler.getLatitude());
                 }
                 secondary_sentence = secondary_stream.getNextSentence();
             }

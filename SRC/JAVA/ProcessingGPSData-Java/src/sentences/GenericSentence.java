@@ -16,7 +16,7 @@ public abstract class GenericSentence {
         date_and_time = new DateAndTime(time, date);
     }
 
-    public DateAndTime getDate_and_timeTime() {
+    public DateAndTime getDate_and_time() {
         return date_and_time;
     }
 

@@ -1,11 +1,9 @@
 package sentences;
 
-import utilities.DateAndTime;
-
 /**
  * Created by jee22 on 05/03/14.
  */
-public class GPRMC extends GenericSentence{
+public class GPRMC extends GenericSentence {
 
     private String status;
 
