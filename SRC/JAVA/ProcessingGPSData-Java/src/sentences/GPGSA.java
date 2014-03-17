@@ -6,12 +6,12 @@ package sentences;
 public class GPGSA extends GenericSentence {
 
     private String fixSelection;
-    private int fixType;
+    private int typeOfFix;
     private int numSatellites;
 
     public GPGSA(String[] sentenceComponents){
         setFixSelection(sentenceComponents[1]);
-        setFixType(Integer.parseInt(sentenceComponents[2]));
+        setTypeOfFix(Integer.parseInt(sentenceComponents[2]));
         setNumSatellites(countSatellites(sentenceComponents));
     }
 
@@ -25,12 +25,12 @@ public class GPGSA extends GenericSentence {
         return n;
     }
 
-    public int getFixType() {
-        return fixType;
+    public int getTypeOfFix() {
+        return typeOfFix;
     }
 
-    private void setFixType(int fixType) {
-        this.fixType = fixType;
+    private void setTypeOfFix(int typeOfFix) {
+        this.typeOfFix = typeOfFix;
     }
 
     public String getFixSelection() {

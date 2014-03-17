@@ -67,30 +67,36 @@ public class DataCoordinator {
                     primary_sentence_handler.parse(primary_sentence);
                 }
             } else if (primary_sentence_handler.getDate_and_time().compareTo(secondary_sentence_handler.getDate_and_time()) > 0) {
-                System.out.println("S1 Greater than S2. \n" + primary_sentence_handler.getDate_and_time() + " \n" + secondary_sentence_handler.getDate_and_time());
+                //System.out.println("S1 Greater than S2. \n" + primary_sentence_handler.getDate_and_time() + " \n" + secondary_sentence_handler.getDate_and_time());
                 secondary_sentence = secondary_stream.getNextSentence();
                 if (secondary_sentence != null) {
                     secondary_sentence_handler.parse(secondary_sentence);
                 }
-            } else if (primary_sentence_handler.getDate_and_time().compareTo(secondary_sentence_handler.getDate_and_time()) == 0) {
+            } else {
 
                 if (primary_sentence != null) {
-                    System.out.println("S1. " + primary_sentence_handler.getDate_and_time());
+                    //System.out.println("S1. " + primary_sentence_handler.getDate_and_time());
                     primary_sentence_handler.parse(primary_sentence);
 
                     //System.out.println("S1 Latitude: " + primary_sentence_handler.getLatitude());
+                    //System.out.println("S1 Elevation: " + primary_sentence_handler.getElevation());
                 }
                 primary_sentence = primary_stream.getNextSentence();
 
 
                 if (secondary_sentence != null) {
-                    System.out.println("S2. " + secondary_sentence_handler.getDate_and_time());
+                    //System.out.println("S2. " + secondary_sentence_handler.getDate_and_time());
                     secondary_sentence_handler.parse(secondary_sentence);
 
                     //System.out.println("S2 Latitude: " + secondary_sentence_handler.getLatitude());
+
                 }
                 secondary_sentence = secondary_stream.getNextSentence();
+
             }
+
+            //System.out.println("S1. Num satellites with SNR: " + primary_sentence_handler.getNumSatellitesWithSNR() + " " + primary_sentence_handler.getDate_and_time());
+            //System.out.println("S2. Num satellites with SNR: " + secondary_sentence_handler.getNumSatellitesWithSNR());
         }
 
     }
