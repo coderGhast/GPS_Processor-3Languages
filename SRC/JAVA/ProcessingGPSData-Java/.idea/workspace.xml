@@ -67,7 +67,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="19" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="357">
+            <state line="5" column="19" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -76,7 +76,7 @@
       <file leaf-file-name="DataCoordinator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataCoordinator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="14" selection-start="4225" selection-end="4225" vertical-scroll-proportion="0.63309354" vertical-offset="1385" max-vertical-offset="1853">
+            <state line="82" column="17" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.5340314" vertical-offset="1190" max-vertical-offset="1853">
               <folding />
             </state>
           </provider>
@@ -85,52 +85,8 @@
       <file leaf-file-name="SentenceHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SentenceHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="39" selection-start="4521" selection-end="4521" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="3111">
+            <state line="110" column="64" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.0" vertical-offset="1594" max-vertical-offset="3689">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gps_1.dat" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gps_data/gps_1.dat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1657" column="14" selection-start="110664" selection-end="110664" vertical-scroll-proportion="0.0" vertical-offset="27944" max-vertical-offset="28577">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gps_2.dat" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gps_data/gps_2.dat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="14" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="38675">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GPGSV.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sentences/GPGSV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="66" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1394">
-              <folding>
-                <element signature="e#1261#1262#0" expanded="true" />
-                <element signature="e#1293#1294#0" expanded="true" />
-                <element signature="e#1340#1341#0" expanded="true" />
-                <element signature="e#1382#1383#0" expanded="true" />
-                <element signature="e#1420#1421#0" expanded="true" />
-                <element signature="e#1457#1458#0" expanded="true" />
-                <element signature="e#1514#1515#0" expanded="true" />
-                <element signature="e#1566#1567#0" expanded="true" />
-                <element signature="e#1614#1615#0" expanded="true" />
-                <element signature="e#1661#1662#0" expanded="true" />
-                <element signature="e#1738#1739#0" expanded="true" />
-                <element signature="e#1810#1811#0" expanded="true" />
-                <element signature="e#1975#1976#0" expanded="true" />
-                <element signature="e#2033#2034#0" expanded="true" />
-                <element signature="e#2089#2090#0" expanded="true" />
-                <element signature="e#2129#2130#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -153,15 +109,17 @@
         <option value="$PROJECT_DIR$/src/FileHandler.java" />
         <option value="$PROJECT_DIR$/src/StreamReader.java" />
         <option value="$PROJECT_DIR$/src/utilities/SentenceUtilities.java" />
-        <option value="$PROJECT_DIR$/src/sentences/GPZDA.java" />
-        <option value="$PROJECT_DIR$/src/sentences/GPGBS.java" />
         <option value="$PROJECT_DIR$/src/sentences/SentenceClass.java" />
         <option value="$PROJECT_DIR$/src/sentences/GPRMC.java" />
         <option value="$PROJECT_DIR$/src/sentences/GenericSentence.java" />
         <option value="$PROJECT_DIR$/src/sentences/GPGSA.java" />
         <option value="$PROJECT_DIR$/src/sentences/GPGGA.java" />
-        <option value="$PROJECT_DIR$/src/utilities/DateAndTime.java" />
         <option value="$PROJECT_DIR$/src/sentences/GPGSV.java" />
+        <option value="$PROJECT_DIR$/src/sentences/GPZDA.java" />
+        <option value="$PROJECT_DIR$/gps_data/gps_2.dat" />
+        <option value="$PROJECT_DIR$/src/sentences/GPGBS.java" />
+        <option value="$PROJECT_DIR$/src/utilities/DateAndTime.java" />
+        <option value="$PROJECT_DIR$/src/SentenceHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/SentenceHandler.java" />
         <option value="$PROJECT_DIR$/src/DataCoordinator.java" />
       </list>
@@ -200,7 +158,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,6 +242,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,6 +259,16 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="true" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -359,19 +327,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -397,6 +352,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -483,7 +451,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28414443" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -496,11 +463,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.121522695" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28414443" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33908948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -778,37 +746,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StreamReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="33" selection-start="908" selection-end="908" vertical-scroll-proportion="0.87344915" vertical-offset="192" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sentences/GPZDA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.08173077" vertical-offset="0" max-vertical-offset="416">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sentences/GPGBS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.08173077" vertical-offset="0" max-vertical-offset="416">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sentences/GenericSentence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
@@ -827,80 +767,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sentences/GPGGA.java">
+    <entry file="file://$PROJECT_DIR$/src/sentences/GPGSV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="44" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <folding>
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-          </folding>
+        <state line="46" column="5" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utilities/DateAndTime.java">
+    <entry file="file://$PROJECT_DIR$/src/sentences/GenericSentence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="26" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.0" vertical-offset="976" max-vertical-offset="1598">
+        <state line="18" column="39" selection-start="422" selection-end="422" vertical-scroll-proportion="0.21518987" vertical-offset="221" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sentences/GPZDA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="562" selection-end="562" vertical-scroll-proportion="0.7316456" vertical-offset="0" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gps_data/gps_2.dat">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="38675">
+        <state line="45" column="6" selection-start="2606" selection-end="2611" vertical-scroll-proportion="0.33333334" vertical-offset="642" max-vertical-offset="38675">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sentences/GPGSV.java">
+    <entry file="file://$PROJECT_DIR$/src/utilities/DateAndTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="66" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1394">
-          <folding>
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="e#1420#1421#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-            <element signature="e#1566#1567#0" expanded="true" />
-            <element signature="e#1614#1615#0" expanded="true" />
-            <element signature="e#1661#1662#0" expanded="true" />
-            <element signature="e#1738#1739#0" expanded="true" />
-            <element signature="e#1810#1811#0" expanded="true" />
-            <element signature="e#1975#1976#0" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
-            <element signature="e#2129#2130#0" expanded="true" />
-          </folding>
+        <state line="21" column="0" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="1615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sentences/GPGBS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="8" selection-start="175" selection-end="175" vertical-scroll-proportion="0.30126584" vertical-offset="0" max-vertical-offset="395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sentences/GPGGA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="54" selection-start="312" selection-end="312" vertical-scroll-proportion="0.3443038" vertical-offset="51" max-vertical-offset="629">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gps_data/gps_1.dat">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1657" column="14" selection-start="110664" selection-end="110664" vertical-scroll-proportion="0.0" vertical-offset="27944" max-vertical-offset="28577">
+        <state line="1657" column="14" selection-start="110664" selection-end="110664" vertical-scroll-proportion="0.56962025" vertical-offset="27944" max-vertical-offset="28577">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SentenceHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="39" selection-start="4521" selection-end="4521" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="3111">
+        <state line="110" column="64" selection-start="3948" selection-end="3948" vertical-scroll-proportion="0.0" vertical-offset="1594" max-vertical-offset="3689">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataCoordinator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="14" selection-start="4225" selection-end="4225" vertical-scroll-proportion="0.63309354" vertical-offset="1385" max-vertical-offset="1853">
+        <state line="82" column="17" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.5340314" vertical-offset="1190" max-vertical-offset="1853">
           <folding />
         </state>
       </provider>

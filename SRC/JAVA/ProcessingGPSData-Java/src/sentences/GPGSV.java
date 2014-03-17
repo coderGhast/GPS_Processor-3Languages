@@ -38,36 +38,12 @@ public class GPGSV extends GenericSentence {
         }
     }
 
-    public int getNumOfGSVs() {
-        return numOfGSVs;
-    }
-
-    public void setNumOfGSVs(int numOfGSVs) {
-        this.numOfGSVs = numOfGSVs;
-    }
-
     public int getSentenceNumber() {
         return sentenceNumber;
     }
 
     public void setSentenceNumber(int sentenceNumber) {
         this.sentenceNumber = sentenceNumber;
-    }
-
-    public int getNumOfSatellitesInAllGSVs() {
-        return numOfSatellitesInAllGSVs;
-    }
-
-    public void setNumOfSatellitesInAllGSVs(int numOfSatellitesInAllGSVs) {
-        this.numOfSatellitesInAllGSVs = numOfSatellitesInAllGSVs;
-    }
-
-    public int getNumOfSatellites() {
-        return satellitesWithSNR.size();
-    }
-
-    public void setSatellitesWithSNR(LinkedList<Integer> satellitesWithSNR) {
-        this.satellitesWithSNR = satellitesWithSNR;
     }
 
     public LinkedList<Integer> getSatellitesWithSNR(){

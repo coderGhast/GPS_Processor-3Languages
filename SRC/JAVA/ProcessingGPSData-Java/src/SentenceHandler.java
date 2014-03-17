@@ -97,9 +97,28 @@ public class SentenceHandler {
     private void handleGPGGA(String[] sentenceComponents){
         GPGGA current_sentence;
         if(this.getDate_and_time() == null){
-            current_sentence = new GPGGA(sentenceComponents, null);
+            /**
+             * If there is no date or time already set, use the time from this
+             * sentence to set it. We don't know the date however, so use default
+             * 1970s date!
+             *
+             * Not much more we can do about this. It's just the bad way in which
+             * NMEA has designed this standard by not providing this sentence with
+             * a valid date format to go with the time. We could assign date/time separately,
+             * but since they need to be together for the GPX output, putting them
+             * together this way will do for now. It is most likely not
+             * to be used either way, with the a GPRMC coming somewhere before,
+             * which should give the correct date for the stream.
+             *
+             * If this were a safety critical system, perhaps it would be a good
+             * idea to get the current date from the device receiving the signal, as it'd
+             * be more likely to pick up the correct date than going off the 'default'
+             * 1970s date, which will definitely be incorrect.
+             */
+            current_sentence = new GPGGA(sentenceComponents, "01011970");
+            setDate_and_time(current_sentence.getDate_and_time());
         } else {
-            current_sentence = new GPGGA(sentenceComponents, String.valueOf(this.getDate_and_time().getTime()));
+            current_sentence = new GPGGA(sentenceComponents, String.valueOf(this.getDate_and_time().getDate()));
             int timeDifference = this.getDate_and_time().compareTo(current_sentence.getDate_and_time());
             if(timeDifference != 0 ){
                 setDate_and_time(current_sentence.getDate_and_time());
@@ -123,19 +142,34 @@ public class SentenceHandler {
             satellitesWithSNR.addAll(current_sentence.getSatellitesWithSNR());
         }
         expectedGSVNumber++;
-        //System.out.println("Num of satellitesWithSNR at end of GPGSV: " + satellitesWithSNR.size());
-    }
-
-    public int getNumSatellitesWithSNR(){
-        return satellitesWithSNR.size();
     }
 
     private void handleGPZDA(String[] sentenceComponents){
-
+        GPZDA current_sentence = new GPZDA(sentenceComponents);
+        if(this.getDate_and_time() == null){
+            setDate_and_time(current_sentence.getDate_and_time());
+        } else {
+            int timeDifference = this.getDate_and_time().compareTo(current_sentence.getDate_and_time());
+            if(timeDifference != 0 ){
+                setDate_and_time(current_sentence.getDate_and_time());
+            }
+        }
     }
 
     private void handleGPGBS(String[] sentenceComponents){
-
+        GPGBS current_sentence;
+        if(this.getDate_and_time() == null){
+            /**
+             * Should somehow get a date before a date is even known?!
+             */
+            current_sentence = new GPGBS(sentenceComponents, null);
+        } else {
+            current_sentence = new GPGBS(sentenceComponents, String.valueOf(this.getDate_and_time().getDate()));
+            int timeDifference = this.getDate_and_time().compareTo(current_sentence.getDate_and_time());
+            if(timeDifference != 0 ){
+                setDate_and_time(current_sentence.getDate_and_time());
+            }
+        }
     }
 
     private void compareLatitude(GenericSentence current_sentence){

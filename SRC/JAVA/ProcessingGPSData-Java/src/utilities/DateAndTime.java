@@ -24,13 +24,14 @@ public class DateAndTime implements Comparable {
 
     private String appendDate(String stringDate){
         StringBuilder sb = new StringBuilder();
-        sb.append(20);
-        sb.append(stringDate.substring(4, 6));
-        sb.append("-");
-        sb.append(stringDate.substring(2, 4));
-        sb.append("-");
-        sb.append(stringDate.substring(0, 2));
-
+        if(!stringDate.equals("Unknown")){
+            sb.append(20);
+            sb.append(stringDate.substring(4, 6));
+            sb.append("-");
+            sb.append(stringDate.substring(2, 4));
+            sb.append("-");
+            sb.append(stringDate.substring(0, 2));
+        }
         return sb.toString();
     }
 
