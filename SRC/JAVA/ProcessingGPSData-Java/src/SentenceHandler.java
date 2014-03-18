@@ -1,6 +1,7 @@
 import sentences.*;
-import utilities.DateAndTime;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.LinkedList;
 
 /**
@@ -9,7 +10,7 @@ import java.util.LinkedList;
  */
 public class SentenceHandler {
 
-    private DateAndTime date_and_time;
+    private Calendar date_and_time;
     private String elevation;
     private String latitude;
     private String longitude;
@@ -86,7 +87,7 @@ public class SentenceHandler {
         GPRMC current_sentence = new GPRMC(sentenceComponents);
         if(this.getDate_and_time() == null){
             setDate_and_time(current_sentence.getDate_and_time());
-        } else if(this.getDate_and_time().compareTo(current_sentence.getDate_and_time()) != 0){
+        } else if(date_and_time.compareTo(current_sentence.getDate_and_time()) != 0){
             setDate_and_time(current_sentence.getDate_and_time());
         }
 
@@ -96,39 +97,16 @@ public class SentenceHandler {
 
     private void handleGPGGA(String[] sentenceComponents){
         GPGGA current_sentence;
-        if(this.getDate_and_time() == null){
-            /**
-             * If there is no date or time already set, use the time from this
-             * sentence to set it. We don't know the date however, so use default
-             * 1970s date!
-             *
-             * Not much more we can do about this. It's just the bad way in which
-             * NMEA has designed this standard by not providing this sentence with
-             * a valid date format to go with the time. We could assign date/time separately,
-             * but since they need to be together for the GPX output, putting them
-             * together this way will do for now. It is most likely not
-             * to be used either way, with the a GPRMC coming somewhere before,
-             * which should give the correct date for the stream.
-             *
-             * If this were a safety critical system, perhaps it would be a good
-             * idea to get the current date from the device receiving the signal, as it'd
-             * be more likely to pick up the correct date than going off the 'default'
-             * 1970s date, which will definitely be incorrect.
-             */
-            current_sentence = new GPGGA(sentenceComponents, "01011970");
-            setDate_and_time(current_sentence.getDate_and_time());
-        } else {
-            current_sentence = new GPGGA(sentenceComponents, String.valueOf(this.getDate_and_time().getDate()));
-            int timeDifference = this.getDate_and_time().compareTo(current_sentence.getDate_and_time());
-            if(timeDifference != 0 ){
+      if(date_and_time != null){
+            current_sentence = new GPGGA(sentenceComponents, date_and_time.get(Calendar.DAY_OF_MONTH), date_and_time.get(Calendar.MONTH), date_and_time.get(Calendar.YEAR));
+            if(date_and_time.compareTo(current_sentence.getDate_and_time()) != 0){
                 setDate_and_time(current_sentence.getDate_and_time());
             }
+          compareLatitude(current_sentence);
+          compareLongitude(current_sentence);
+          setTypeOfFix(current_sentence.getTypeOfFix());
+          setElevation(current_sentence.getElevation());
         }
-
-        compareLatitude(current_sentence);
-        compareLongitude(current_sentence);
-        setTypeOfFix(current_sentence.getTypeOfFix());
-        setElevation(current_sentence.getElevation());
     }
 
     private void handleGPGSV(String[] sentenceComponents){
@@ -149,8 +127,7 @@ public class SentenceHandler {
         if(this.getDate_and_time() == null){
             setDate_and_time(current_sentence.getDate_and_time());
         } else {
-            int timeDifference = this.getDate_and_time().compareTo(current_sentence.getDate_and_time());
-            if(timeDifference != 0 ){
+            if(date_and_time.compareTo(current_sentence.getDate_and_time()) != 0 ){
                 setDate_and_time(current_sentence.getDate_and_time());
             }
         }
@@ -158,15 +135,9 @@ public class SentenceHandler {
 
     private void handleGPGBS(String[] sentenceComponents){
         GPGBS current_sentence;
-        if(this.getDate_and_time() == null){
-            /**
-             * Should somehow get a date before a date is even known?!
-             */
-            current_sentence = new GPGBS(sentenceComponents, null);
-        } else {
-            current_sentence = new GPGBS(sentenceComponents, String.valueOf(this.getDate_and_time().getDate()));
-            int timeDifference = this.getDate_and_time().compareTo(current_sentence.getDate_and_time());
-            if(timeDifference != 0 ){
+        if(this.getDate_and_time() != null){
+            current_sentence = new GPGBS(sentenceComponents, date_and_time.get(Calendar.DATE), date_and_time.get(Calendar.MONTH), date_and_time.get(Calendar.YEAR));
+            if(date_and_time.compareTo(current_sentence.getDate_and_time()) != 0 ){
                 setDate_and_time(current_sentence.getDate_and_time());
             }
         }
@@ -184,11 +155,11 @@ public class SentenceHandler {
         }
     }
 
-    public DateAndTime getDate_and_time() {
+    public Calendar getDate_and_time() {
         return date_and_time;
     }
 
-    public void setDate_and_time(DateAndTime date_and_time) {
+    public void setDate_and_time(Calendar date_and_time) {
 
         this.date_and_time = date_and_time;
     }

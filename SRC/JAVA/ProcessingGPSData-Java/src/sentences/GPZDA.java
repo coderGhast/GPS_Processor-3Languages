@@ -15,7 +15,6 @@ public class GPZDA extends GenericSentence {
          * that doesn't include it either.
          */
         dateString.append(sentenceComponents[4].substring(2,4));
-
         setDate_and_time(sentenceComponents[1], dateString.toString());
     }
 }

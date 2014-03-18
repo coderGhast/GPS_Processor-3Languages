@@ -22,5 +22,4 @@ public class GPRMC extends GenericSentence {
         this.status = status;
     }
 
-
 }

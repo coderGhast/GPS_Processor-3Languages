@@ -8,8 +8,8 @@ public class GPGGA extends GenericSentence {
     private int numOfSatellites;
     private String elevation;
 
-    public GPGGA(String[] sentenceComponents, String date) {
-        setDate_and_time(sentenceComponents[1], date);
+    public GPGGA(String[] sentenceComponents, int day, int month, int year) {
+        setStringCalendarTime(sentenceComponents[1], day, month, year);
         setLatitude(sentenceComponents[2], sentenceComponents[3].charAt(0));
         setLongitude(sentenceComponents[4], sentenceComponents[5].charAt(0));
         setTypeOfFix(Integer.parseInt(sentenceComponents[6]));

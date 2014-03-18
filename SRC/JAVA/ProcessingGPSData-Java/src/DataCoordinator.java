@@ -1,7 +1,12 @@
+import java.util.Calendar;
+
 /**
  * Created by jee22 on 05/03/14.
  */
 public class DataCoordinator {
+
+    private XMLCreator xmlCreator;
+    private Calendar lastRecordedTime;
 
     private StreamReader primary_stream;
     private StreamReader secondary_stream;
@@ -11,30 +16,25 @@ public class DataCoordinator {
     DataCoordinator() {
         primary_sentence_handler = new SentenceHandler();
         secondary_sentence_handler = new SentenceHandler();
+        xmlCreator = new XMLCreator();
     }
 
     protected void start() {
+        System.out.println(xmlCreator.startXML());
         primary_stream = new StreamReader("gps_data/gps_1.dat");
         secondary_stream = new StreamReader("gps_data/gps_2.dat");
 
         if (primary_stream != null && secondary_stream != null) {
             syncStreams();
-        }
 
+
+        }
 
         primary_stream.closeStream();
         secondary_stream.closeStream();
+        System.out.println(xmlCreator.endXML());
     }
 
-    /**
-     * TODO:
-     * 1. (DONE) Make Date/Time comparable (just get on with it..)
-     * 2. (DONE) Write conditional for comparing the date/time, and how
-     * to handle the case of stream one ahead or behind the stream
-     * 3. Assign all data from the Stream (1) to variables.
-     * 4. Start checking the validity and integrity of those variables each second
-     * 5. If they are no good, check Stream 2.
-     */
     private void syncStreams() {
         String primary_sentence = null;
         String secondary_sentence = null;
@@ -48,44 +48,46 @@ public class DataCoordinator {
             secondary_sentence_handler.parse(secondary_sentence);
         }
 
-        /**
-         * IT WORKS HORAY
-         *
-         * In this format at least, it takes in the stuff and makes them match.
-         * The ordering of this is rather important. Any other ordering, including
-         * how the Printlns run are important.
-         * Eventually, I will be changing up the printlns for outputting to XML,
-         * so it is vital that this ordering is kept in order for the XML
-         * output to also be correct. :)
-         */
         while (primary_sentence != null) {
+            lastRecordedTime = primary_sentence_handler.getDate_and_time();
+
+            String s1_time = xmlCreator.formatDateAndTime(primary_sentence_handler.getDate_and_time());
+            String s2_time = xmlCreator.formatDateAndTime(secondary_sentence_handler.getDate_and_time());
 
             if (primary_sentence_handler.getDate_and_time().compareTo(secondary_sentence_handler.getDate_and_time()) < 0) {
-                //System.out.println("S1 Less than S2. \n" + primary_sentence_handler.getDate_and_time() + " \n" + secondary_sentence_handler.getDate_and_time());
+                //System.out.println("S1 Less than S2. \n" + s1_time + " \n" + s2_time);
                 primary_sentence = primary_stream.getNextSentence();
                 if (primary_sentence != null) {
                     primary_sentence_handler.parse(primary_sentence);
+                    if(primary_sentence_handler.getDate_and_time().compareTo(lastRecordedTime) != 1 && primary_sentence_handler.getDate_and_time().compareTo(lastRecordedTime) != 0){
+                        //System.out.println("HALP HALP: " + primary_sentence_handler.getDate_and_time().compareTo(lastRecordedTime));
+                    }
                 }
+
             } else if (primary_sentence_handler.getDate_and_time().compareTo(secondary_sentence_handler.getDate_and_time()) > 0) {
-                //System.out.println("S1 Greater than S2. \n" + primary_sentence_handler.getDate_and_time() + " \n" + secondary_sentence_handler.getDate_and_time());
+                //System.out.println("S1 Greater than S2. \n" + s1_time + " \n" + s2_time);
                 secondary_sentence = secondary_stream.getNextSentence();
                 if (secondary_sentence != null) {
                     secondary_sentence_handler.parse(secondary_sentence);
                 }
+
             } else {
 
                 if (primary_sentence != null) {
-                    //System.out.println("S1. " + primary_sentence_handler.getDate_and_time());
+                    //System.out.println("S1. " + s1_time);
                     primary_sentence_handler.parse(primary_sentence);
 
-                    //System.out.println("S1 Latitude: " + primary_sentence_handler.getLatitude());
-                    //System.out.println("S1 Elevation: " + primary_sentence_handler.getElevation());
+                    System.out.println(xmlCreator.formatLatitudeAndLongitude(primary_sentence_handler.getLatitude(), primary_sentence_handler.getLongitude()));
+                    System.out.println(xmlCreator.formatElevation(primary_sentence_handler.getElevation()));
+                    System.out.println(xmlCreator.formatDateAndTime(primary_sentence_handler.getDate_and_time()));
+                    System.out.println(xmlCreator.endWaypoint());
+
                 }
                 primary_sentence = primary_stream.getNextSentence();
 
 
                 if (secondary_sentence != null) {
-                    //System.out.println("S2. " + secondary_sentence_handler.getDate_and_time());
+                    //System.out.println("S2. " + s2_time);
                     secondary_sentence_handler.parse(secondary_sentence);
 
                     //System.out.println("S2 Latitude: " + secondary_sentence_handler.getLatitude());
@@ -100,4 +102,6 @@ public class DataCoordinator {
         }
 
     }
+
+
 }

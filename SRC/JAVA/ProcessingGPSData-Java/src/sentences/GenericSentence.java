@@ -1,6 +1,8 @@
 package sentences;
 
-import utilities.DateAndTime;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  * @author - James Euesden <jee22@aber.ac.uk>
@@ -10,13 +12,33 @@ public abstract class GenericSentence {
 
     private String latitude;
     private String longitude;
-    private DateAndTime date_and_time;
+    private Calendar date_and_time = new GregorianCalendar();
 
-    public void setDate_and_time(String time, String date){
-        date_and_time = new DateAndTime(time, date);
+    public void setStringCalendarTime(String time, int day, int month, int year){
+        int hour = Integer.parseInt(time.substring(0, 2));
+        int minute = Integer.parseInt(time.substring(2, 4));
+        int second = Integer.parseInt(time.substring(4, 6));
+        /**
+         * Year, Month, Day, Hour, Minute, Second
+         */
+        date_and_time.set(year, month, day, hour, minute, second);
+
     }
 
-    public DateAndTime getDate_and_time() {
+    public void setDate_and_time(String time, String date){
+        int year = Integer.parseInt(date.substring(4,6)) + 2000;
+        int month = Integer.parseInt(date.substring(2, 4)) - 1;
+        int day = Integer.parseInt(date.substring(0, 2));
+        int hour = Integer.parseInt(time.substring(0, 2));
+        int minute = Integer.parseInt(time.substring(2, 4));
+        int second = Integer.parseInt(time.substring(4, 6));
+        /**
+         * Year, Month, Day, Hour, Minute, Second
+         */
+        date_and_time.set(year, month, day, hour, minute, second);
+    }
+
+    public Calendar getDate_and_time() {
         return date_and_time;
     }
 
