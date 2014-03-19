@@ -1,6 +1,9 @@
 package sentences;
 
 /**
+ * Get the Time from the GPGBS
+ * sentence.
+ *
  * Created by jee22 on 05/03/14.
  */
 public class GPGBS extends GenericSentence {

@@ -1,10 +1,16 @@
 package sentences;
 
 /**
+ * Sort out the data from a GPZDA sentence.
+ *
  * Created by jee22 on 05/03/14.
  */
 public class GPZDA extends GenericSentence {
 
+    /**
+     * Deal with the sentence as it comes in.
+     * @param sentenceComponents The sentence as a String.
+     */
     public GPZDA(String[] sentenceComponents) {
         StringBuilder dateString = new StringBuilder();
         dateString.append(sentenceComponents[2]);

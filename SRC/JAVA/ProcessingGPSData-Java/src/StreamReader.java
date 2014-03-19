@@ -4,14 +4,20 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
+ * Takes a file name and opens
+ * it to be processed as a GPS
+ * .dat file.
+ *
  * Created by jee22 on 05/03/14.
  */
 public class StreamReader {
-
-    private int numLines = 1;
     private FileReader reader;
     private BufferedReader textReader;
 
+    /**
+     * Start the class by opening the File.
+     * @param fileName The file to be read in.
+     */
     public StreamReader(String fileName){
         try {
             reader = new FileReader(fileName);
@@ -23,6 +29,10 @@ public class StreamReader {
         }
     }
 
+    /**
+     * Read the next sentence (line) of the file.
+     * @return The full sentence.
+     */
     protected String getNextSentence(){
         String currentSentence = null;
         try {
@@ -33,6 +43,9 @@ public class StreamReader {
         return currentSentence;
     }
 
+    /**
+     * End reading the stream/file.
+     */
     protected void closeStream(){
         try {
             reader.close();
