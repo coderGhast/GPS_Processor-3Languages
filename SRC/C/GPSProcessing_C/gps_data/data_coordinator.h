@@ -21,6 +21,7 @@ extern "C" {
 
 #endif	/* DATA_COORDINATOR_H */
 
+void void determine_best_output_stream(stream * stream_1, stream * stream_2);
 void get_initial_timestamps(FILE*primary_stream, stream * stream_1, 
         FILE*secondary_stream, stream * stream_2);
 void sync_streams(FILE * primary_stream, FILE *secondary_stream);

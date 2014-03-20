@@ -14,6 +14,7 @@
       <itemPath>gps_data/offset_handler.h</itemPath>
       <itemPath>gps_data/sentence_handler.h</itemPath>
       <itemPath>gps_data/stream_components.h</itemPath>
+      <itemPath>gps_data/xml_creator.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -56,6 +57,8 @@
       </toolsSet>
       <compileType>
         <cTool>
+          <standard>2</standard>
+          <commandLine>-D_BSD_SOURCE</commandLine>
           <warningLevel>3</warningLevel>
         </cTool>
       </compileType>
@@ -88,6 +91,8 @@
       <item path="gps_data/stream_components.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="gps_data/xml_creator.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gps_data/xml_creator.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -141,6 +146,8 @@
       <item path="gps_data/stream_components.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="gps_data/xml_creator.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gps_data/xml_creator.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>

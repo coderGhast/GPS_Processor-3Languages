@@ -23,4 +23,4 @@ extern "C" {
 
 double update_latitude_offset(stream * stream_1, stream * stream_2);
 double update_longitude_offset(stream * stream_1, stream * stream_2);
-void applyOffsets(stream * stream_2, double lat_offset, double lng_offset);
+void apply_offsets(stream * stream_2, double lat_offset, double lng_offset);

@@ -24,9 +24,11 @@ extern "C" {
 #include <time.h>
 #include "stream_components.h"
 
-void setLatitude(stream * streamer, char * string_lat, char * lat_facing);
-void setLongitude(stream * streamer, char * string_lat, char * lat_facing);
+
 void handle_gprmc(stream * streamer, char * sentence);
 void handle_gpgga(stream * streamer, char * sentence);
+void handle_gpgsv(stream * streamer, char * sentence);
+void parse_sentence(stream * streamer, char * sentence);
+(stream * streamer, char * sentence);
 void handle_gpgsv(stream * streamer, char * sentence);
 void parse_sentence(stream * streamer, char * sentence);

@@ -46,7 +46,7 @@ OBJECTFILES= \
 
 
 # C Compiler Flags
-CFLAGS=
+CFLAGS=-D_BSD_SOURCE
 
 # CC Compiler Flags
 CCFLAGS=
@@ -72,42 +72,42 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gpsprocessing_c: ${OBJECTFILES}
 ${OBJECTDIR}/file_handler.o: file_handler.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/file_handler.o file_handler.c
+	$(COMPILE.c) -g -Werror -std=c89 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/file_handler.o file_handler.c
 
 ${OBJECTDIR}/gps_data/data_coordinator.o: gps_data/data_coordinator.c 
 	${MKDIR} -p ${OBJECTDIR}/gps_data
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/data_coordinator.o gps_data/data_coordinator.c
+	$(COMPILE.c) -g -Werror -std=c89 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/data_coordinator.o gps_data/data_coordinator.c
 
 ${OBJECTDIR}/gps_data/date_manipulation.o: gps_data/date_manipulation.c 
 	${MKDIR} -p ${OBJECTDIR}/gps_data
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/date_manipulation.o gps_data/date_manipulation.c
+	$(COMPILE.c) -g -Werror -std=c89 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/date_manipulation.o gps_data/date_manipulation.c
 
 ${OBJECTDIR}/gps_data/offset_handler.o: gps_data/offset_handler.c 
 	${MKDIR} -p ${OBJECTDIR}/gps_data
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/offset_handler.o gps_data/offset_handler.c
+	$(COMPILE.c) -g -Werror -std=c89 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/offset_handler.o gps_data/offset_handler.c
 
 ${OBJECTDIR}/gps_data/sentence_handler.o: gps_data/sentence_handler.c 
 	${MKDIR} -p ${OBJECTDIR}/gps_data
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/sentence_handler.o gps_data/sentence_handler.c
+	$(COMPILE.c) -g -Werror -std=c89 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/sentence_handler.o gps_data/sentence_handler.c
 
 ${OBJECTDIR}/gps_data/stream_components.o: gps_data/stream_components.c 
 	${MKDIR} -p ${OBJECTDIR}/gps_data
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/stream_components.o gps_data/stream_components.c
+	$(COMPILE.c) -g -Werror -std=c89 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/stream_components.o gps_data/stream_components.c
 
 ${OBJECTDIR}/gps_data/xml_creator.o: gps_data/xml_creator.c 
 	${MKDIR} -p ${OBJECTDIR}/gps_data
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/xml_creator.o gps_data/xml_creator.c
+	$(COMPILE.c) -g -Werror -std=c89 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/xml_creator.o gps_data/xml_creator.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -Werror -std=c89 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
 # Subprojects
 .build-subprojects:

@@ -32,4 +32,13 @@ typedef struct stream_struct {
     time_t date_and_time;
     double latitude;
     double longitude;
+    double elevation;
+    int expected_sentence_number;
+    int snrs_above_30_below_35;
+    int snrs_above_35;
 } stream;
+
+void set_latitude(stream * streamer, char * string_lat, char * lat_facing);
+void set_longitude(stream * streamer, char * string_lat, char * lat_facing);
+void set_elevation(stream * streamer, char * string_elevation);
+void calc_snr_amounts(stream * streamer, char * snr);

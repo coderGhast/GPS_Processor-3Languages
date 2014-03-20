@@ -22,6 +22,5 @@ extern "C" {
 
 time_t new_date(int day, int month, int year, int hours, 
         int minutes, int seconds);
-void print_date(time_t time);
 time_t set_date_and_time(char * time_string, char * date_string);
-time_t update_time(char * time_string, time_t time_to_update);
+time_t update_time(char * time_string, time_t time_to_update);tring, time_t time_to_update);
