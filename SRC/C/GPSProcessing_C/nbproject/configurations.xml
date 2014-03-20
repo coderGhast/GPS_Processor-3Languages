@@ -11,7 +11,9 @@
       <itemPath>gps_data/data_coordinator.h</itemPath>
       <itemPath>gps_data/date_manipulation.h</itemPath>
       <itemPath>gps_data/file_handler.h</itemPath>
+      <itemPath>gps_data/offset_handler.h</itemPath>
       <itemPath>gps_data/sentence_handler.h</itemPath>
+      <itemPath>gps_data/stream_components.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -24,7 +26,10 @@
       <itemPath>gps_data/date_manipulation.c</itemPath>
       <itemPath>file_handler.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>gps_data/offset_handler.c</itemPath>
       <itemPath>gps_data/sentence_handler.c</itemPath>
+      <itemPath>gps_data/stream_components.c</itemPath>
+      <itemPath>gps_data/xml_creator.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -70,9 +75,19 @@
       </item>
       <item path="gps_data/gps_2.dat" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="gps_data/offset_handler.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gps_data/offset_handler.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="gps_data/sentence_handler.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="gps_data/sentence_handler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gps_data/stream_components.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gps_data/stream_components.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gps_data/xml_creator.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -113,9 +128,19 @@
       </item>
       <item path="gps_data/gps_2.dat" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="gps_data/offset_handler.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gps_data/offset_handler.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="gps_data/sentence_handler.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="gps_data/sentence_handler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gps_data/stream_components.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gps_data/stream_components.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gps_data/xml_creator.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>

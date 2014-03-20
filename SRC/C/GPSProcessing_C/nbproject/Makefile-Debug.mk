@@ -38,7 +38,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/file_handler.o \
 	${OBJECTDIR}/gps_data/data_coordinator.o \
 	${OBJECTDIR}/gps_data/date_manipulation.o \
+	${OBJECTDIR}/gps_data/offset_handler.o \
 	${OBJECTDIR}/gps_data/sentence_handler.o \
+	${OBJECTDIR}/gps_data/stream_components.o \
+	${OBJECTDIR}/gps_data/xml_creator.o \
 	${OBJECTDIR}/main.o
 
 
@@ -81,10 +84,25 @@ ${OBJECTDIR}/gps_data/date_manipulation.o: gps_data/date_manipulation.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/date_manipulation.o gps_data/date_manipulation.c
 
+${OBJECTDIR}/gps_data/offset_handler.o: gps_data/offset_handler.c 
+	${MKDIR} -p ${OBJECTDIR}/gps_data
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/offset_handler.o gps_data/offset_handler.c
+
 ${OBJECTDIR}/gps_data/sentence_handler.o: gps_data/sentence_handler.c 
 	${MKDIR} -p ${OBJECTDIR}/gps_data
 	${RM} "$@.d"
 	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/sentence_handler.o gps_data/sentence_handler.c
+
+${OBJECTDIR}/gps_data/stream_components.o: gps_data/stream_components.c 
+	${MKDIR} -p ${OBJECTDIR}/gps_data
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/stream_components.o gps_data/stream_components.c
+
+${OBJECTDIR}/gps_data/xml_creator.o: gps_data/xml_creator.c 
+	${MKDIR} -p ${OBJECTDIR}/gps_data
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Werror -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gps_data/xml_creator.o gps_data/xml_creator.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
