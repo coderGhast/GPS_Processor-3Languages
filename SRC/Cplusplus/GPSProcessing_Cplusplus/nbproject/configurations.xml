@@ -54,6 +54,10 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <standard>2</standard>
+          <warningLevel>3</warningLevel>
+        </cTool>
         <ccTool>
           <standard>4</standard>
           <warningLevel>3</warningLevel>
