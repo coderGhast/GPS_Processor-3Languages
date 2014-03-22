@@ -20,14 +20,15 @@ static FILE * output_gpx;
  * the file of any previous data.
  */
 void initial_open() {
-    output_gpx = fopen("output_c.gpx", "w");
+    output_gpx = fopen("c_output.gpx", "w");
 }
 
 /**
  * Open the already edited file.
  */
 void open_file() {
-    output_gpx = fopen("output_c.gpx", "a");
+    printf("Writing out to file...\n");
+    output_gpx = fopen("c_output.gpx", "a");
 }
 
 /**

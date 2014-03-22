@@ -94,22 +94,25 @@ public abstract class GenericSentence {
      * @param compass - Direction of compass
      */
     public void setLatitude(String stringLatitude, char compass) {
-        StringBuffer latString = new StringBuffer(stringLatitude);
         /**
          * Move the period index of the Latitude to be correct for
          * GPX format.
          */
-        int periodIndex = latString.indexOf(".");
-        latString = latString.deleteCharAt(periodIndex);
-        latString.insert(periodIndex - 2, ".");
+        int periodIndex = stringLatitude.indexOf(".");
+        int start_of_minutes = periodIndex - 2;
+        int degrees = Integer.parseInt(stringLatitude.substring(0, start_of_minutes));
+        double minutes = Double.parseDouble((stringLatitude.substring(start_of_minutes, stringLatitude.length())));
+
+        minutes = degrees + (minutes / 60);
 
         /**
          * If the compass is South, make the Latitude negative.
          */
         if (compass == 'S') {
-            latString.insert(0, "-");
+            minutes = minutes * -1;
         }
-        latitude = latString.toString();
+
+        latitude = String.valueOf(minutes);
     }
 
     /**
@@ -119,21 +122,25 @@ public abstract class GenericSentence {
      * @param compass - Direction of compass
      */
     public void setLongitude(String stringLongitude, char compass) {
-        StringBuffer longString = new StringBuffer(stringLongitude);
         /**
          * Move the period index of the Longitude to be correct for
          * GPX format.
          */
-        int periodIndex = longString.indexOf(".");
-        longString = longString.deleteCharAt(periodIndex);
-        longString.insert(periodIndex - 2, ".");
+        int periodIndex = stringLongitude.indexOf(".");
+        int start_of_minutes = periodIndex - 2;
+        int degrees = Integer.parseInt(stringLongitude.substring(0, start_of_minutes));
+        double minutes = Double.parseDouble((stringLongitude.substring(start_of_minutes, stringLongitude.length())));
+
+
+        minutes = degrees + (minutes / 60);
 
         /**
-         * If the compass is West, make the Longitude negative.
+         * If the compass is South, make the Latitude negative.
          */
         if (compass == 'W') {
-            longString.insert(0, "-");
+            minutes = minutes * -1;
         }
-        longitude = longString.toString();
+
+        longitude = String.valueOf(minutes);
     }
 }

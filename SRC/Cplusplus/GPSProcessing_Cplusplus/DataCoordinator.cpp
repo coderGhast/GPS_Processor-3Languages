@@ -2,6 +2,12 @@
  * File:   DataCoordinator.cpp
  * Author: jee22
  * 
+ * Handles the flow of data throughout the application
+ * and acts as a central section for getting the data
+ * from the files using FileHandler, and passing/parsing
+ * them through DataCoordinator, to be set where they
+ * need to be set in Stream.
+ * 
  * Created on 21 March 2014, 02:23
  */
 
@@ -13,16 +19,30 @@
 #include "Stream.h"
 #include "FileHandler.h"
 
+/**
+ * Constructor sets up the necessary classes and assigns
+ * some initial values to variables that need them.
+ */
 DataCoordinator::DataCoordinator() {
     sentence_handler = new SentenceHandler();
+    /* The strings for the sentences cannot start
+     NULL or without any content. This is due to the
+     'while' loop used in the syncStreams(). If they
+     were blank, then the while loop would not run.*/
     primary_sentence = "Begin";
     secondary_sentence = "Begin";
+    /* Make sure that the application knows that no
+     second has been missed at the start. */
     missed_second = 0;
 }
 
 DataCoordinator::DataCoordinator(const DataCoordinator& orig) {
 }
 
+/**
+ * On deletion of this class, delete those other classes within it
+ * that are taking up memory.
+ */
 DataCoordinator::~DataCoordinator() {
     delete(sentence_handler);
     delete(primary_file);
@@ -75,6 +95,12 @@ void DataCoordinator::determineBestOutputStream(Stream * stream_1, Stream * stre
     }
 }
 
+/**
+ * Get the initial timestamps for the streams, so we can properly
+ * sync the streams together.
+ * @param stream_1 Primary stream
+ * @param stream_2 Secondary stream
+ */
 void DataCoordinator::getInitialTimestamps(Stream * stream_1, Stream * stream_2) {
     /* Flat time to compare against other times that should
      be more than the flat default time. */
@@ -83,15 +109,11 @@ void DataCoordinator::getInitialTimestamps(Stream * stream_1, Stream * stream_2)
     /* While primary stream doesn't have a time more than the
      default, keep reading and parsing.*/
     while (difftime(stream_1->getDateAndTime(), zero) == 0) {
-        time_t temp_time = stream_1->getDateAndTime();
-        struct tm * temp = gmtime(&temp_time);
         primary_sentence = primary_file->readFile();
         sentence_handler->parseSentence(stream_1, primary_sentence);
     }
     /* Same as above, but with the secondary stream. */
     while (difftime(stream_2->getDateAndTime(), zero) == 0) {
-        time_t temp_time = stream_2->getDateAndTime();
-        struct tm * temp = gmtime(&temp_time);
         secondary_sentence = secondary_file->readFile();
         sentence_handler->parseSentence(stream_2, secondary_sentence);
     }
@@ -126,13 +148,27 @@ void DataCoordinator::checkForMissedSeconds(Stream * stream_1, Stream * stream_2
 
 }
 
+/**
+ * The core of the application, syncing the two streams
+ * together so that their times match, and what to do
+ * when their timestamps do match.
+ */
 void DataCoordinator::syncStreams() {
+    cout<<"Syncing streams"<<endl;
+    /* Instantiate the sentence handler in order to decide what
+     to do with each sentence in the files. */
     sentence_handler = new SentenceHandler();
+
+    /* Instantiate two new Streams to hold the data about each
+     individual stream. */
     Stream * primary_stream = new Stream();
     Stream * secondary_stream = new Stream();
 
+    /* Get a timestamp for each stream, parsing the data as it is
+     read in, read for the first output to the file. */
     getInitialTimestamps(primary_stream, secondary_stream);
 
+    /* While there are still sentences to be read in and parsed. */
     while (primary_sentence.compare("") != 0) {
         /*
          * Check that there hasn't been a second missed in the timestamps.
@@ -145,7 +181,7 @@ void DataCoordinator::syncStreams() {
                 /* Output stream 2 to XML WITH OFFSETS */
                 applyOffsets(secondary_stream);
                 xml_creator->outputStream(secondary_stream);
-                
+
                 /* After putting out the second stream to make up
                  for the missing second, set missing second to
                  show that no second has been missed. */
@@ -216,39 +252,75 @@ void DataCoordinator::syncStreams() {
         }
     }
 
+    /* Free the memory through deleting the classes made that
+     are no longer needed. */
     delete(primary_stream);
     delete(secondary_stream);
 }
 
-double DataCoordinator::updateLatOffset(Stream * stream_1, Stream * stream_2){
+/**
+ * Update the Latitude offset. 
+ * @param stream_1 Primary stream
+ * @param stream_2 Secondary stream
+ * @return The new offset
+ */
+double DataCoordinator::updateLatOffset(Stream * stream_1, Stream * stream_2) {
     double double_lat;
     double_lat = stream_1->getLatitude();
+    /* Get the difference between the primary and secondary stream's latitudes
+     in order to be used as an offset. */
     double_lat = double_lat - stream_2->getLatitude();
     return double_lat;
 }
 
-double DataCoordinator::updateLngOffset(Stream * stream_1, Stream * stream_2){
+/**
+ * Update the Longitude offset.
+ * @param stream_1 Primary stream
+ * @param stream_2 Secondary stream
+ * @return The new offset
+ */
+double DataCoordinator::updateLngOffset(Stream * stream_1, Stream * stream_2) {
     double double_lng;
     double_lng = stream_1->getLongitude();
+    /* Get the difference between the primary and secondary stream's longitudes
+     in order to be used as an offset. */
     double_lng = double_lng - stream_2->getLongitude();
     return double_lng;
 }
 
-void DataCoordinator::applyOffsets(Stream * streamer){
+/**
+ * Apply the stored offsets to a stream.
+ * @param streamer The stream to have it's lat and lng changed with the offsets
+ */
+void DataCoordinator::applyOffsets(Stream * streamer) {
     streamer->setLatitudeVal(streamer->getLatitude() + lat_offset);
     streamer->setLongitudeVal(streamer->getLongitude() + lng_offset);
 }
 
+/**
+ * The main start and end of the application.
+ */
 void DataCoordinator::runApp() {
+    cout<<"Begin application..."<<endl;
+    /* Instantiate the classes for reading in the files, with
+     the file names. */
     primary_file = new FileHandler("gps_data/gps_1.dat", 'r');
     secondary_file = new FileHandler("gps_data/gps_2.dat", 'r');
-    
+
+    /* Create a new XMLCreator object in order to write out the
+     XML, and start by writing out the beginning of the GPX
+     XML tags. */
     xml_creator = new XMLCreator();
     xml_creator->startXML();
-    
+
+    /* Begin the syncing of the streams. */
     syncStreams();
-    
+
+    /* End the GPX XML file. */
     xml_creator->endXML();
+
+    /* Close down the files. */
     primary_file->closeReadFile();
     secondary_file->closeReadFile();
+    cout<<"Application finished"<<endl;
 }

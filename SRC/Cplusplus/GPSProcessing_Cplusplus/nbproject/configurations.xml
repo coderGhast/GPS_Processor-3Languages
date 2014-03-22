@@ -9,7 +9,6 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>DataCoordinator.h</itemPath>
-      <itemPath>DateManipulation.h</itemPath>
       <itemPath>FileHandler.h</itemPath>
       <itemPath>SentenceHandler.h</itemPath>
       <itemPath>Stream.h</itemPath>
@@ -23,7 +22,6 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>DataCoordinator.cpp</itemPath>
-      <itemPath>DateManipulation.cpp</itemPath>
       <itemPath>FileHandler.cpp</itemPath>
       <itemPath>SentenceHandler.cpp</itemPath>
       <itemPath>Stream.cpp</itemPath>
@@ -66,10 +64,6 @@
       <item path="DataCoordinator.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DataCoordinator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="DateManipulation.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="DateManipulation.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="FileHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -117,10 +111,6 @@
       <item path="DataCoordinator.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DataCoordinator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="DateManipulation.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="DateManipulation.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="FileHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>

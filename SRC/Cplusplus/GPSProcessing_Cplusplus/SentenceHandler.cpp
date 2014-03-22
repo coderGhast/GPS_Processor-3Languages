@@ -29,28 +29,28 @@ SentenceHandler::~SentenceHandler() {
  * @param streamer The stream for the sentence.
  * @param sentence The sentence itself.
  */
-void SentenceHandler::handle_gprmc(Stream * streamer, stringstream * sentence){
+void SentenceHandler::handle_gprmc(Stream * streamer, stringstream * sentence) {
     string dont_care;
     string time_string;
     string date_string;
     string location; /* For Latitude, Longitude and Elevation.*/
     string facing; /* N,E,S,W */
-    
+
     getline(*sentence, time_string, ','); /* Get time */
-    
+
     getline(*sentence, dont_care, ','); /* Ignore */
-    
+
     getline(*sentence, location, ','); /* Get Latitude */
     getline(*sentence, facing, ','); /* Get facing */
     streamer->setLatitude(location, facing);
-    
+
     getline(*sentence, location, ','); /* Get Longitude */
     getline(*sentence, facing, ','); /* Get facing */
     streamer->setLongitude(location, facing);
 
     getline(*sentence, dont_care, ','); /* Ignore */
     getline(*sentence, dont_care, ','); /* Ignore */
-    
+
     getline(*sentence, date_string, ','); /* Get date */
     streamer->setDateAndTime(date_string, time_string);
 }
@@ -60,31 +60,31 @@ void SentenceHandler::handle_gprmc(Stream * streamer, stringstream * sentence){
  * @param streamer The stream where the sentence came from.
  * @param sentence The sentence itself.
  */
-void SentenceHandler::handle_gpgga(Stream * streamer, stringstream * sentence){
+void SentenceHandler::handle_gpgga(Stream * streamer, stringstream * sentence) {
     string dont_care;
     string time_string;
     string location;
     string facing;
-    
+
     getline(*sentence, time_string, ','); /* Get time */
     streamer->updateTime(time_string);
-    
+
     getline(*sentence, location, ','); /* Get Latitude */
     getline(*sentence, facing, ','); /* Get facing (N/S) */
     streamer->setLatitude(location, facing);
-    
+
     getline(*sentence, location, ','); /* Get Longitude */
     getline(*sentence, facing, ','); /* Get facing (E/W) */
     streamer->setLongitude(location, facing);
-    
+
     getline(*sentence, dont_care, ','); /* Ignore */
     getline(*sentence, dont_care, ','); /* Ignore */
     getline(*sentence, dont_care, ','); /* Ignore */
-    
+
     getline(*sentence, location, ','); /* Elevation */
     streamer->setElevation(location);
 
-    streamer->updateTime(time_string);    
+    streamer->updateTime(time_string);
 }
 
 /**
@@ -92,14 +92,14 @@ void SentenceHandler::handle_gpgga(Stream * streamer, stringstream * sentence){
  * @param streamer The stream the sentence came from.
  * @param sentence The sentence itself.
  */
-void SentenceHandler::handle_gpgsv(Stream * streamer, stringstream * sentence){
-    string dont_care;
-    getline(*sentence, dont_care, ','); /* Ignore - Total number of GSVs for this set. */
-    getline(*sentence, dont_care, ','); /* Sentence Number */
+void SentenceHandler::handle_gpgsv(Stream * streamer, stringstream * sentence) {
+    string temp;
+    getline(*sentence, temp, ','); /* Ignore - Total number of GSVs for this set. */
+    getline(*sentence, temp, ','); /* Sentence Number */
     int sentence_number;
-    stringstream ss(dont_care);
+    stringstream ss(temp); /* Convert the string for Sentence Number into a number.*/
     ss >> sentence_number;
-    getline(*sentence, dont_care, ','); /* Ignore - Total number of satellites */
+    getline(*sentence, temp, ','); /* Ignore - Total number of satellites */
 
     /* If the sentence is the first, start the stream recordings
      for the satellites from 0 again. */
@@ -112,15 +112,16 @@ void SentenceHandler::handle_gpgsv(Stream * streamer, stringstream * sentence){
     /* While the last line hasn't been reached yet, keep going over the
      sentence. */
     while (last_line != 1) {
-        getline(*sentence, dont_care, ','); /* Ignore - Satellite PRN */
-        getline(*sentence, dont_care, ','); /* Ignore - Elevation */
-        getline(*sentence, dont_care, ','); /* Ignore - Azimuth */
-        
+        getline(*sentence, temp, ','); /* Ignore - Satellite PRN */
+        getline(*sentence, temp, ','); /* Ignore - Elevation */
+        getline(*sentence, temp, ','); /* Ignore - Azimuth */
+
         string snr;
         getline(*sentence, snr, ','); /* SNR value */
-        
+
         int asterisk = snr.find('*');
-        
+
+        /* If there is an asterisk in the string, do this. */
         if (asterisk != string::npos) {
             /* Get the value before the asterisk and check
              to show that this is the last section of the line. */
@@ -129,22 +130,28 @@ void SentenceHandler::handle_gpgsv(Stream * streamer, stringstream * sentence){
         }
 
         /* If the snr value is higher than 0, increment the
-         number of satellites through a call to calc_snr_amounts()*/
+         number of satellites through a call to calcSNRAmounts()*/
         if (snr.compare("") != 0) {
             streamer->calcSNRAmounts(snr);
         }
     }
 }
 
-void SentenceHandler::parseSentence(Stream * streamer, string sentence){
+/**
+ * Take in a string, representing a sentence and parse it through, determining
+ * it's type and sending it where it needs to go.
+ * @param streamer
+ * @param sentence
+ */
+void SentenceHandler::parseSentence(Stream * streamer, string sentence) {
     stringstream linestream(sentence);
     string sentence_signifier;
     getline(linestream, sentence_signifier, ',');
-    if(sentence_signifier.compare("$GPRMC") == 0){
+    if (sentence_signifier.compare("$GPRMC") == 0) {
         handle_gprmc(streamer, &linestream);
-    } else if(sentence_signifier.compare("$GPGGA") == 0){
+    } else if (sentence_signifier.compare("$GPGGA") == 0) {
         handle_gpgga(streamer, &linestream);
-    } else if(sentence_signifier.compare("$GPGSV") == 0){
+    } else if (sentence_signifier.compare("$GPGSV") == 0) {
         handle_gpgsv(streamer, &linestream);
     }
 }

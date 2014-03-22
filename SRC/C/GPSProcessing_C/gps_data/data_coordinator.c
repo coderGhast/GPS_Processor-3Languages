@@ -140,6 +140,7 @@ void check_for_missed_seconds(stream * stream_1, stream * stream_2) {
  * @param secondary_stream - Secondary stream file.
  */
 void sync_streams(FILE * primary_stream, FILE *secondary_stream) {
+    printf("Syncing streams...\n");
     /*
      * Make two new stream structs to hold the data about the
      * primary and secondary streams (stream_1 and stream_2,
@@ -248,6 +249,7 @@ void sync_streams(FILE * primary_stream, FILE *secondary_stream) {
  * the main function.
  */
 void run_application() {
+    printf("Starting application...\n");
     /* Opens the file for output using 'w' for 'write'*/
     initial_open();
     /* Writes the start of the GPX XML file */
@@ -266,4 +268,5 @@ void run_application() {
 
     /* Writes the end of the GPX XML file.*/
     end_xml();
+    printf("Closing application\n");
 }

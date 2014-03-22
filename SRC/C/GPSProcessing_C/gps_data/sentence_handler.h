@@ -29,6 +29,3 @@ void handle_gprmc(stream * streamer, char * sentence);
 void handle_gpgga(stream * streamer, char * sentence);
 void handle_gpgsv(stream * streamer, char * sentence);
 void parse_sentence(stream * streamer, char * sentence);
-(stream * streamer, char * sentence);
-void handle_gpgsv(stream * streamer, char * sentence);
-void parse_sentence(stream * streamer, char * sentence);

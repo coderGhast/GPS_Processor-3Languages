@@ -12,38 +12,91 @@
 
 /**
  * Set the Latitude in a struct stream from a string
- * of the latitude and facing.
+ * of the latitude and facing, converting the NMEA into decimal.
  * @param streamer The stream.
  * @param string_lat The Latitude as a string.
  * @param lat_facing The facing of the latitude.
  */
 void set_latitude(stream * streamer, char * string_lat, char * lat_facing) {
-    /* Convert the string into a double */
-    streamer->latitude = atof(string_lat);
-    /* Change the Latitude for the correct format for GPX. */
-    streamer->latitude = streamer->latitude / 100;
+    char *decimal;
+
+    /* Find the decimal point in the string*/
+    decimal = strchr(string_lat, '.');
+    /* Get the index of the start of the 'time' through -2 of the decimal*/
+    int start_of_time = ((int)(decimal - string_lat)) - 2;
+    
+    /* Put aside some c style strings for the degrees and time. */
+    char * degrees = calloc(1, sizeof string_lat);
+    char * time = calloc(1, sizeof string_lat);
+    
+    /* Take apart the latitude string to get the components for
+     the degrees and time */
+    strncpy(degrees, string_lat, start_of_time);
+    strncpy(time, string_lat + start_of_time, sizeof string_lat);
+    
+    /* Convert the strings into numbers. */
+    int degrees_int = atoi(degrees);
+    double time_dbl = atof(time);
+    
+    /* Convert the NMEA coordinates into decimal.*/
+    time_dbl = time_dbl / 60;
+    time_dbl = time_dbl + degrees_int;
+    
     /* If the facing is South, turn the Latitude negative. */
     if (strcmp(lat_facing, "S") == 0) {
-        streamer->latitude = streamer->latitude * -1;
+        time_dbl = time_dbl * -1;
     }
+    
+    /* Set it! */
+    streamer->latitude = time_dbl;
+   
+    /* Free up the calloc'd memory. */
+    free(degrees);
+    free(time);
 }
 
 /**
  * Set the Longitude in a struct stream from a string
  * of the longitude and facing.
  * @param streamer The stream.
- * @param string_lat The Longitude as a string.
- * @param lat_facing The facing of the Longitude.
+ * @param string_lng The Longitude as a string.
+ * @param lng_facing The facing of the Longitude.
  */
-void set_longitude(stream * streamer, char * string_lat, char * lat_facing) {
-    /* Convert the string into a double */
-    streamer->longitude = atof(string_lat);
-    /* Change the Longitude for the correct format for GPX. */
-    streamer->longitude = streamer->longitude / 100;
-    /* If the facing is West, turn the Longitude negative. */
-    if (strcmp(lat_facing, "W") == 0) {
-        streamer->longitude = streamer->longitude * -1;
+void set_longitude(stream * streamer, char * string_lng, char * lng_facing) {
+    char *decimal;
+
+    /* Find the decimal point in the string*/
+    decimal = strchr(string_lng, '.');
+    int start_of_time = ((int)(decimal - string_lng)) - 2;
+    
+    /* Put aside some c style strings for the degrees and time. */
+    char * degrees = calloc(1, sizeof string_lng);
+    char * time = calloc(1, sizeof string_lng);
+    
+    /* Take apart the latitude string to get the components for
+     the degrees and time */
+    strncpy(degrees, string_lng, start_of_time);
+    strncpy(time, string_lng + start_of_time, sizeof string_lng);
+    
+    /* Convert the strings into numbers. */
+    int degrees_int = atoi(degrees);
+    double time_dbl = atof(time);
+    
+    /* Convert the NMEA coordinates into decimal.*/
+    time_dbl = time_dbl / 60;
+    time_dbl = time_dbl + degrees_int;
+    
+    /* If the facing is West, turn the Latitude negative. */
+    if (strcmp(lng_facing, "W") == 0) {
+        time_dbl = time_dbl * -1;
     }
+    
+    /* Set it! */
+    streamer->longitude = time_dbl;
+    
+    /* Free up the calloc'd memory. */
+    free(degrees);
+    free(time);
 }
 
 /**

@@ -36,7 +36,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/DataCoordinator.o \
-	${OBJECTDIR}/DateManipulation.o \
 	${OBJECTDIR}/FileHandler.o \
 	${OBJECTDIR}/SentenceHandler.o \
 	${OBJECTDIR}/Stream.o \
@@ -72,11 +71,6 @@ ${OBJECTDIR}/DataCoordinator.o: DataCoordinator.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DataCoordinator.o DataCoordinator.cpp
-
-${OBJECTDIR}/DateManipulation.o: DateManipulation.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DateManipulation.o DateManipulation.cpp
 
 ${OBJECTDIR}/FileHandler.o: FileHandler.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -38,6 +38,6 @@ typedef struct stream_struct {
 } stream;
 
 void set_latitude(stream * streamer, char * string_lat, char * lat_facing);
-void set_longitude(stream * streamer, char * string_lat, char * lat_facing);
+void set_longitude(stream * streamer, char * string_lng, char * lng_facing);
 void set_elevation(stream * streamer, char * string_elevation);
 void calc_snr_amounts(stream * streamer, char * snr);
