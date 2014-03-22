@@ -14,7 +14,7 @@
 #include "stream_components.h"
 
 /**
- * Takes a GPRMC sentence and takes the needed date.
+ * Takes a GPRMC sentence and takes the needed data.
  * @param streamer The stream for the sentence.
  * @param sentence The sentence itself.
  */
@@ -25,8 +25,8 @@ void handle_gprmc(stream * streamer, char * sentence) {
     char * lat_facing = strsep(&sentence, ","); /* Facing (N/S) */
     char * longitude = strsep(&sentence, ","); /* Longitude */
     char * lng_facing = strsep(&sentence, ","); /* Facing (W/E) */
-    strsep(&sentence, ","); /* unsure */
-    strsep(&sentence, ","); /* unsure */
+    strsep(&sentence, ","); /* Ignore */
+    strsep(&sentence, ","); /* Ignore */
     char * date_string = strsep(&sentence, ","); /* Date */
 
     set_latitude(streamer, latitude, lat_facing);

@@ -82,7 +82,7 @@ void get_initial_timestamps(FILE*primary_stream, stream * stream_1,
         FILE*secondary_stream, stream * stream_2) {
     /* Flat time to compare against other times that should
      be more than the flat default time. */
-    time_t zero;
+    time_t zero = 0;
 
     /* While primary stream doesn't have a time more than the
      default, keep reading and parsing.*/
@@ -105,14 +105,14 @@ void get_initial_timestamps(FILE*primary_stream, stream * stream_1,
  */
 void check_for_missed_seconds(stream * stream_1, stream * stream_2) {
     /* Flat time to compare against */
-    time_t zero;
+    time_t zero = 0;
     /* Check that the last recorded time has been given
      a time to begin with. If not, give it the most recent. */
     if (difftime(zero, last_recorded_time) == 0) {
         last_recorded_time = stream_1->date_and_time;
     }
     /* If the last read in time from stream 1 is further than
-     1 second ahread of the last recorded time, we've missed
+     1 second ahead of the last recorded time, we've missed
      a second*/
     if (difftime(last_recorded_time, stream_1->date_and_time) < -1) {
         /* Check that the primary stream is being supported by

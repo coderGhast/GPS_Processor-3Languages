@@ -33,7 +33,6 @@ typedef struct stream_struct {
     double latitude;
     double longitude;
     double elevation;
-    int expected_sentence_number;
     int snrs_above_30_below_35;
     int snrs_above_35;
 } stream;

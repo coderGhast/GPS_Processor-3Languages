@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="gps_data" displayName="gps_data" projectFiles="true">
+      <itemPath>gps_data/gps_1.dat</itemPath>
+      <itemPath>gps_data/gps_2.dat</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>DataCoordinator.h</itemPath>
+      <itemPath>DateManipulation.h</itemPath>
+      <itemPath>FileHandler.h</itemPath>
+      <itemPath>SentenceHandler.h</itemPath>
+      <itemPath>Stream.h</itemPath>
+      <itemPath>XMLCreator.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>DataCoordinator.cpp</itemPath>
+      <itemPath>DateManipulation.cpp</itemPath>
+      <itemPath>FileHandler.cpp</itemPath>
+      <itemPath>SentenceHandler.cpp</itemPath>
+      <itemPath>Stream.cpp</itemPath>
+      <itemPath>XMLCreator.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>gps_data</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>4</standard>
+          <warningLevel>3</warningLevel>
+        </ccTool>
+      </compileType>
+      <item path="DataCoordinator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DataCoordinator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DateManipulation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DateManipulation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SentenceHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SentenceHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Stream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Stream.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="XMLCreator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="XMLCreator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gps_data/gps_1.dat" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gps_data/gps_2.dat" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="DataCoordinator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DataCoordinator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DateManipulation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DateManipulation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SentenceHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SentenceHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Stream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Stream.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="XMLCreator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="XMLCreator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gps_data/gps_1.dat" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gps_data/gps_2.dat" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
