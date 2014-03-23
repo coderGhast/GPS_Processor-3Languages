@@ -1,11 +1,3 @@
-CS22510-GPS_Processor
-=====================
-
-Reading in GPS data from 2 different GPS trackers, syncing them and getting the best position from them both, tracking a path. Written in Java, C and C++.
-
-
-README file for the assignment hand-in, detailing the location and usage of files:
-
 ============= README ====================
 =========================================
 
