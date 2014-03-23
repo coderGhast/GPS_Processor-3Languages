@@ -47,6 +47,7 @@ outside of those provided by the base language itself were
 used in the writing of these applications.
 
 ================== C ======================
+
 The C source files (.c) and header files (.h) are
 all contained in:
 SRC > C > ProcessingGPSData_C:

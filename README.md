@@ -6,21 +6,21 @@ Reading in GPS data from 2 different GPS trackers, syncing them and getting the 
 
 README file for the assignment hand-in, detailing the location and usage of files:
 
-============= README ====================
-=========================================
+============= README ===========
+================================
 
 This README file covers the full assignment
 for the CS22510's 'Where Am I?' assignment, written by
-James Euesden (jee22) and where the particular
+James (jee22) and where the particular
 files for it may be found.
 
-============= DOCUMENTATION ==============
+============= DOCUMENTATION ====
 
 The documentation for this assignment can be found in the
 DOCS folder, and should be consulted for the 'What I did'
 portion of the assignment.
 
-============= SCREEN CASTS ===============
+============= SCREEN CASTS =====
 
 The screen casts demonstrating the three versions of the
 applications in use and their output can be found in
@@ -38,7 +38,7 @@ player is a free to use media player software that supports
 the most common and used media formats.
 http://www.videolan.org/vlc/index.html
 
-============= PROGRAM CODE ================
+============= PROGRAM CODE =====
 
 All three application programs are contained in the SRC folder,
 with titles to indicate which folder is for which language.
@@ -54,7 +54,8 @@ required and the files themselves. No additional libraries
 outside of those provided by the base language itself were
 used in the writing of these applications.
 
-================== C ======================
+================== C ===========
+
 The C source files (.c) and header files (.h) are
 all contained in:
 SRC > C > ProcessingGPSData_C:
@@ -87,7 +88,7 @@ which allows the application the use of 'strsep'
 to split the char * c style strings into parts
 split by the delimiter ','.
 
-================== C++ ====================
+================== C++ =========
 
 The C source (.cpp) and header (.h) files are
 all contained in:
@@ -110,7 +111,7 @@ be tested in, the NetBeans IDE. This was set to
 C++98 mode, with Warnings set to be Errors, using
 the g++ compiler in an ubuntu environment.
 
-================== Java ===================
+================== Java =========
 
 The Java source files (.java) are all contained in:
 SRC > JAVA > ProcessingGPSData-Java > src:
@@ -129,7 +130,7 @@ that where the files are compiled is also a folder called
 'gps_data' containing the two .dat files, the application should
 run. This was built on a machine running Windows 8.1. 
 
-================== GPX OUTPUT =============
+================== GPX OUTPUT ===
 
 The GPX output files can each be found either in the
 top layer of the source file folders of the applications
