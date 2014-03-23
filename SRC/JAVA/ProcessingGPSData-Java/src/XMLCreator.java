@@ -53,12 +53,12 @@ public class XMLCreator {
      * @param longitude Longitude as a String
      * @return The resulting XML String.
      */
-    public String formatLatitudeAndLongitude(String latitude, String longitude){
+    public String formatLatitudeAndLongitude(double latitude, double longitude){
         StringBuilder sb = new StringBuilder();
         sb.append("<wpt lat=\"");
-        sb.append(latitude);
+        sb.append(String.valueOf(latitude));
         sb.append("\" lon=\"");
-        sb.append(longitude);
+        sb.append(String.valueOf(longitude));
         sb.append("\">");
         sb.append("\n");
 
@@ -78,7 +78,7 @@ public class XMLCreator {
      * @param elevation The elevation to be tagged.
      * @return The tagged elevation.
      */
-    public String formatElevation(String elevation){
+    public String formatElevation(double elevation){
         StringBuilder sb = new StringBuilder();
         sb.append("<ele>");
         sb.append(elevation);

@@ -24,7 +24,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:10:29Z</time>
 </wpt>
 <wpt lat="52.43270833333333" lon="-4.019371666666666">
-<ele>38.8</ele>
+<ele>38.9</ele>
 <time>2014-2-21T15:10:30Z</time>
 </wpt>
 <wpt lat="52.43270833333333" lon="-4.019371666666666">
@@ -84,7 +84,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:10:44Z</time>
 </wpt>
 <wpt lat="52.432293333333334" lon="-4.020255">
-<ele>42.8</ele>
+<ele>43.3</ele>
 <time>2014-2-21T15:10:45Z</time>
 </wpt>
 <wpt lat="52.432235" lon="-4.0203516666666665">
@@ -124,7 +124,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:10:54Z</time>
 </wpt>
 <wpt lat="52.43162" lon="-4.021391666666666">
-<ele>43.5</ele>
+<ele>43.0</ele>
 <time>2014-2-21T15:10:55Z</time>
 </wpt>
 <wpt lat="52.431556666666665" lon="-4.021513333333333">
@@ -144,7 +144,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:10:59Z</time>
 </wpt>
 <wpt lat="52.43131666666667" lon="-4.021945">
-<ele>41.6</ele>
+<ele>41.5</ele>
 <time>2014-2-21T15:11:0Z</time>
 </wpt>
 <wpt lat="52.43127333333333" lon="-4.022025">
@@ -184,7 +184,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:11:9Z</time>
 </wpt>
 <wpt lat="52.43111666666667" lon="-4.022306666666666">
-<ele>41.1</ele>
+<ele>40.7</ele>
 <time>2014-2-21T15:11:10Z</time>
 </wpt>
 <wpt lat="52.431086666666666" lon="-4.022365">
@@ -204,7 +204,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:11:14Z</time>
 </wpt>
 <wpt lat="52.430908333333335" lon="-4.02272">
-<ele>38.4</ele>
+<ele>37.9</ele>
 <time>2014-2-21T15:11:15Z</time>
 </wpt>
 <wpt lat="52.43085166666667" lon="-4.0228383333333335">
@@ -244,7 +244,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:11:24Z</time>
 </wpt>
 <wpt lat="52.430483333333335" lon="-4.024273333333333">
-<ele>38.5</ele>
+<ele>38.7</ele>
 <time>2014-2-21T15:11:25Z</time>
 </wpt>
 <wpt lat="52.43045" lon="-4.024441666666666">
@@ -324,7 +324,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:11:44Z</time>
 </wpt>
 <wpt lat="52.429975" lon="-4.027935">
-<ele>36.3</ele>
+<ele>36.4</ele>
 <time>2014-2-21T15:11:45Z</time>
 </wpt>
 <wpt lat="52.42993666666667" lon="-4.028136666666667">
@@ -344,39 +344,39 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:11:49Z</time>
 </wpt>
 <wpt lat="52.429768333333335" lon="-4.028948333333333">
-<ele>25.82</ele>
+<ele>27.09</ele>
 <time>2014-2-21T15:11:50Z</time>
 </wpt>
 <wpt lat="52.429698333333334" lon="-4.029125">
-<ele>27.09</ele>
+<ele>29.71</ele>
 <time>2014-2-21T15:11:51Z</time>
 </wpt>
 <wpt lat="52.42962166666667" lon="-4.029306666666667">
-<ele>29.71</ele>
+<ele>30.93</ele>
 <time>2014-2-21T15:11:52Z</time>
 </wpt>
 <wpt lat="52.429541666666665" lon="-4.029483333333333">
-<ele>30.93</ele>
+<ele>33.51</ele>
 <time>2014-2-21T15:11:53Z</time>
 </wpt>
 <wpt lat="52.429473333333334" lon="-4.029651666666667">
-<ele>33.51</ele>
+<ele>35.29</ele>
 <time>2014-2-21T15:11:54Z</time>
 </wpt>
 <wpt lat="52.42940333333333" lon="-4.0298066666666665">
-<ele>35.4</ele>
+<ele>35.7</ele>
 <time>2014-2-21T15:11:55Z</time>
 </wpt>
 <wpt lat="52.42932833333333" lon="-4.029953333333333">
-<ele>37.03</ele>
+<ele>38.78</ele>
 <time>2014-2-21T15:11:56Z</time>
 </wpt>
 <wpt lat="52.429253333333335" lon="-4.030098333333333">
-<ele>38.78</ele>
+<ele>40.29</ele>
 <time>2014-2-21T15:11:57Z</time>
 </wpt>
 <wpt lat="52.429183333333334" lon="-4.03024">
-<ele>40.29</ele>
+<ele>42.04</ele>
 <time>2014-2-21T15:11:58Z</time>
 </wpt>
 <wpt lat="52.42912166666667" lon="-4.030391666666667">
@@ -384,7 +384,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:11:59Z</time>
 </wpt>
 <wpt lat="52.429066666666664" lon="-4.030545">
-<ele>41.1</ele>
+<ele>42.3</ele>
 <time>2014-2-21T15:12:0Z</time>
 </wpt>
 <wpt lat="52.429015" lon="-4.030693333333334">
@@ -424,7 +424,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:12:9Z</time>
 </wpt>
 <wpt lat="52.42854166666667" lon="-4.031946666666666">
-<ele>55.4</ele>
+<ele>56.4</ele>
 <time>2014-2-21T15:12:10Z</time>
 </wpt>
 <wpt lat="52.428488333333334" lon="-4.032088333333333">
@@ -444,7 +444,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:12:14Z</time>
 </wpt>
 <wpt lat="52.428293333333336" lon="-4.03261">
-<ele>60.4</ele>
+<ele>61.4</ele>
 <time>2014-2-21T15:12:15Z</time>
 </wpt>
 <wpt lat="52.428246666666666" lon="-4.032726666666667">
@@ -484,7 +484,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:12:24Z</time>
 </wpt>
 <wpt lat="52.42808333333333" lon="-4.033111666666667">
-<ele>64.1</ele>
+<ele>63.9</ele>
 <time>2014-2-21T15:12:25Z</time>
 </wpt>
 <wpt lat="52.42808333333333" lon="-4.033111666666667">
@@ -504,7 +504,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:12:29Z</time>
 </wpt>
 <wpt lat="52.42802666666667" lon="-4.033215">
-<ele>63.1</ele>
+<ele>63.0</ele>
 <time>2014-2-21T15:12:30Z</time>
 </wpt>
 <wpt lat="52.427985" lon="-4.0332566666666665">
@@ -544,7 +544,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:12:39Z</time>
 </wpt>
 <wpt lat="52.427275" lon="-4.033728333333333">
-<ele>68.2</ele>
+<ele>69.0</ele>
 <time>2014-2-21T15:12:40Z</time>
 </wpt>
 <wpt lat="52.427166666666665" lon="-4.033808333333333">
@@ -564,7 +564,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:12:44Z</time>
 </wpt>
 <wpt lat="52.42667333333333" lon="-4.034183333333333">
-<ele>71.5</ele>
+<ele>71.9</ele>
 <time>2014-2-21T15:12:45Z</time>
 </wpt>
 <wpt lat="52.426545" lon="-4.034268333333333">
@@ -604,7 +604,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:12:54Z</time>
 </wpt>
 <wpt lat="52.4253" lon="-4.035283333333333">
-<ele>76.6</ele>
+<ele>76.8</ele>
 <time>2014-2-21T15:12:55Z</time>
 </wpt>
 <wpt lat="52.425176666666665" lon="-4.035441666666666">
@@ -624,7 +624,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:12:59Z</time>
 </wpt>
 <wpt lat="52.42465333333333" lon="-4.036056666666667">
-<ele>76.8</ele>
+<ele>76.6</ele>
 <time>2014-2-21T15:13:0Z</time>
 </wpt>
 <wpt lat="52.424515" lon="-4.0362">
@@ -664,163 +664,163 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:13:9Z</time>
 </wpt>
 <wpt lat="52.42338" lon="-4.036836666666667">
-<ele>87.32</ele>
+<ele>87.71</ele>
 <time>2014-2-21T15:13:10Z</time>
 </wpt>
 <wpt lat="52.42326833333333" lon="-4.03684">
-<ele>87.71</ele>
+<ele>87.72</ele>
 <time>2014-2-21T15:13:11Z</time>
 </wpt>
 <wpt lat="52.423165" lon="-4.03685">
-<ele>87.72</ele>
+<ele>87.55</ele>
 <time>2014-2-21T15:13:12Z</time>
 </wpt>
 <wpt lat="52.42306166666667" lon="-4.036835">
-<ele>87.55</ele>
+<ele>85.98</ele>
 <time>2014-2-21T15:13:13Z</time>
 </wpt>
 <wpt lat="52.422963333333335" lon="-4.036826666666666">
-<ele>85.98</ele>
+<ele>84.59</ele>
 <time>2014-2-21T15:13:14Z</time>
 </wpt>
-<wpt lat="52.422963333333335" lon="-4.036826666666666">
-<ele>84.59</ele>
+<wpt lat="52.42288" lon="-4.036843333333334">
+<ele>82.68</ele>
 <time>2014-2-21T15:13:15Z</time>
 </wpt>
 <wpt lat="52.42279833333333" lon="-4.036871666666666">
-<ele>82.68</ele>
+<ele>81.65</ele>
 <time>2014-2-21T15:13:16Z</time>
 </wpt>
 <wpt lat="52.42270333333333" lon="-4.036901666666667">
-<ele>81.65</ele>
+<ele>79.83</ele>
 <time>2014-2-21T15:13:17Z</time>
 </wpt>
 <wpt lat="52.42261333333333" lon="-4.036955">
-<ele>79.83</ele>
+<ele>78.84</ele>
 <time>2014-2-21T15:13:18Z</time>
 </wpt>
 <wpt lat="52.422525" lon="-4.0370333333333335">
-<ele>78.84</ele>
+<ele>77.89</ele>
 <time>2014-2-21T15:13:19Z</time>
 </wpt>
 <wpt lat="52.422443333333334" lon="-4.037121666666667">
-<ele>77.89</ele>
+<ele>76.9</ele>
 <time>2014-2-21T15:13:20Z</time>
 </wpt>
 <wpt lat="52.422355" lon="-4.03721">
-<ele>76.90</ele>
+<ele>75.91</ele>
 <time>2014-2-21T15:13:21Z</time>
 </wpt>
 <wpt lat="52.42227833333333" lon="-4.037333333333334">
-<ele>75.91</ele>
+<ele>74.92</ele>
 <time>2014-2-21T15:13:22Z</time>
 </wpt>
 <wpt lat="52.4222" lon="-4.037443333333333">
-<ele>74.92</ele>
+<ele>73.71</ele>
 <time>2014-2-21T15:13:23Z</time>
 </wpt>
 <wpt lat="52.42209166666667" lon="-4.037513333333333">
-<ele>73.71</ele>
+<ele>73.24</ele>
 <time>2014-2-21T15:13:24Z</time>
 </wpt>
-<wpt lat="52.42209166666667" lon="-4.037513333333333">
-<ele>73.24</ele>
+<wpt lat="52.422005" lon="-4.037605">
+<ele>73.34</ele>
 <time>2014-2-21T15:13:25Z</time>
 </wpt>
 <wpt lat="52.421926666666664" lon="-4.037705">
-<ele>73.34</ele>
+<ele>72.83</ele>
 <time>2014-2-21T15:13:26Z</time>
 </wpt>
 <wpt lat="52.421821666666666" lon="-4.037768333333333">
-<ele>72.83</ele>
+<ele>72.89</ele>
 <time>2014-2-21T15:13:27Z</time>
 </wpt>
 <wpt lat="52.42171166666667" lon="-4.03781">
-<ele>72.89</ele>
+<ele>72.38</ele>
 <time>2014-2-21T15:13:28Z</time>
 </wpt>
 <wpt lat="52.421611666666664" lon="-4.037885">
-<ele>72.38</ele>
+<ele>72.43</ele>
 <time>2014-2-21T15:13:29Z</time>
 </wpt>
-<wpt lat="52.421611666666664" lon="-4.037885">
-<ele>72.43</ele>
+<wpt lat="52.42151833333333" lon="-4.03794">
+<ele>72.76</ele>
 <time>2014-2-21T15:13:30Z</time>
 </wpt>
 <wpt lat="52.42140166666667" lon="-4.03797">
-<ele>72.76</ele>
+<ele>72.29</ele>
 <time>2014-2-21T15:13:31Z</time>
 </wpt>
 <wpt lat="52.421285" lon="-4.0379966666666665">
-<ele>72.29</ele>
+<ele>71.87</ele>
 <time>2014-2-21T15:13:32Z</time>
 </wpt>
 <wpt lat="52.42116333333333" lon="-4.03805">
-<ele>71.87</ele>
+<ele>70.88</ele>
 <time>2014-2-21T15:13:33Z</time>
 </wpt>
 <wpt lat="52.42104333333333" lon="-4.038168333333333">
-<ele>70.88</ele>
+<ele>71.29</ele>
 <time>2014-2-21T15:13:34Z</time>
 </wpt>
 <wpt lat="52.420945" lon="-4.038275">
-<ele>71.29</ele>
+<ele>70.3</ele>
 <time>2014-2-21T15:13:35Z</time>
 </wpt>
 <wpt lat="52.42084666666667" lon="-4.038388333333334">
-<ele>70.30</ele>
+<ele>69.32</ele>
 <time>2014-2-21T15:13:36Z</time>
 </wpt>
 <wpt lat="52.420761666666664" lon="-4.038515">
-<ele>69.32</ele>
+<ele>69.73</ele>
 <time>2014-2-21T15:13:37Z</time>
 </wpt>
 <wpt lat="52.42068666666667" lon="-4.038615">
-<ele>69.73</ele>
+<ele>69.49</ele>
 <time>2014-2-21T15:13:38Z</time>
 </wpt>
 <wpt lat="52.420613333333336" lon="-4.038733333333333">
-<ele>69.49</ele>
+<ele>70.09</ele>
 <time>2014-2-21T15:13:39Z</time>
 </wpt>
 <wpt lat="52.42053833333333" lon="-4.038841666666666">
-<ele>70.09</ele>
+<ele>69.24</ele>
 <time>2014-2-21T15:13:40Z</time>
 </wpt>
 <wpt lat="52.420473333333334" lon="-4.03893">
-<ele>69.24</ele>
+<ele>69.75</ele>
 <time>2014-2-21T15:13:41Z</time>
 </wpt>
 <wpt lat="52.42041" lon="-4.039016666666667">
-<ele>69.75</ele>
+<ele>70.49</ele>
 <time>2014-2-21T15:13:42Z</time>
 </wpt>
 <wpt lat="52.42033833333333" lon="-4.039076666666666">
-<ele>70.49</ele>
+<ele>70.43</ele>
 <time>2014-2-21T15:13:43Z</time>
 </wpt>
 <wpt lat="52.420265" lon="-4.039125">
-<ele>70.43</ele>
+<ele>70.19</ele>
 <time>2014-2-21T15:13:44Z</time>
 </wpt>
-<wpt lat="52.420265" lon="-4.039125">
-<ele>70.19</ele>
+<wpt lat="52.420181666666664" lon="-4.0392">
+<ele>70.75</ele>
 <time>2014-2-21T15:13:45Z</time>
 </wpt>
 <wpt lat="52.420098333333335" lon="-4.039285">
-<ele>70.75</ele>
+<ele>70.65</ele>
 <time>2014-2-21T15:13:46Z</time>
 </wpt>
 <wpt lat="52.42001333333333" lon="-4.039373333333334">
-<ele>70.65</ele>
+<ele>70.55</ele>
 <time>2014-2-21T15:13:47Z</time>
 </wpt>
 <wpt lat="52.41993333333333" lon="-4.0394733333333335">
-<ele>70.55</ele>
+<ele>71.29</ele>
 <time>2014-2-21T15:13:48Z</time>
 </wpt>
 <wpt lat="52.41986" lon="-4.039576666666667">
-<ele>71.29</ele>
+<ele>71.19</ele>
 <time>2014-2-21T15:13:49Z</time>
 </wpt>
 <wpt lat="52.419785" lon="-4.03967">
@@ -844,7 +844,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:13:54Z</time>
 </wpt>
 <wpt lat="52.419376666666665" lon="-4.040113333333333">
-<ele>69.5</ele>
+<ele>71.6</ele>
 <time>2014-2-21T15:13:55Z</time>
 </wpt>
 <wpt lat="52.41928333333333" lon="-4.040205">
@@ -864,7 +864,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:13:59Z</time>
 </wpt>
 <wpt lat="52.418888333333335" lon="-4.040545">
-<ele>79.1</ele>
+<ele>80.8</ele>
 <time>2014-2-21T15:14:0Z</time>
 </wpt>
 <wpt lat="52.41878833333333" lon="-4.040621666666667">
@@ -904,7 +904,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:14:9Z</time>
 </wpt>
 <wpt lat="52.417883333333336" lon="-4.041298333333334">
-<ele>94.6</ele>
+<ele>95.9</ele>
 <time>2014-2-21T15:14:10Z</time>
 </wpt>
 <wpt lat="52.417791666666666" lon="-4.041378333333333">
@@ -924,7 +924,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:14:14Z</time>
 </wpt>
 <wpt lat="52.417411666666666" lon="-4.0416533333333335">
-<ele>102.4</ele>
+<ele>104.1</ele>
 <time>2014-2-21T15:14:15Z</time>
 </wpt>
 <wpt lat="52.41731333333333" lon="-4.041718333333334">
@@ -964,7 +964,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:14:24Z</time>
 </wpt>
 <wpt lat="52.416445" lon="-4.04173">
-<ele>116.3</ele>
+<ele>117.2</ele>
 <time>2014-2-21T15:14:25Z</time>
 </wpt>
 <wpt lat="52.41636333333334" lon="-4.041616666666667">
@@ -984,7 +984,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:14:29Z</time>
 </wpt>
 <wpt lat="52.41607666666667" lon="-4.04127">
-<ele>121.9</ele>
+<ele>122.6</ele>
 <time>2014-2-21T15:14:30Z</time>
 </wpt>
 <wpt lat="52.41603" lon="-4.04122">
@@ -1044,7 +1044,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:14:44Z</time>
 </wpt>
 <wpt lat="52.41588333333333" lon="-4.041223333333333">
-<ele>126.0</ele>
+<ele>126.4</ele>
 <time>2014-2-21T15:14:45Z</time>
 </wpt>
 <wpt lat="52.41584666666667" lon="-4.041273333333334">
@@ -1104,7 +1104,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:14:59Z</time>
 </wpt>
 <wpt lat="52.415171666666666" lon="-4.042628333333333">
-<ele>128.6</ele>
+<ele>128.4</ele>
 <time>2014-2-21T15:15:0Z</time>
 </wpt>
 <wpt lat="52.415105" lon="-4.042798333333334">
@@ -1144,7 +1144,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:15:9Z</time>
 </wpt>
 <wpt lat="52.414611666666666" lon="-4.0443533333333335">
-<ele>127.3</ele>
+<ele>127.2</ele>
 <time>2014-2-21T15:15:10Z</time>
 </wpt>
 <wpt lat="52.41457666666667" lon="-4.044533333333334">
@@ -1164,7 +1164,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:15:14Z</time>
 </wpt>
 <wpt lat="52.414355" lon="-4.04516">
-<ele>124.7</ele>
+<ele>123.9</ele>
 <time>2014-2-21T15:15:15Z</time>
 </wpt>
 <wpt lat="52.414278333333336" lon="-4.0452916666666665">
@@ -1204,7 +1204,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:15:24Z</time>
 </wpt>
 <wpt lat="52.41363666666667" lon="-4.04643">
-<ele>118.7</ele>
+<ele>118.3</ele>
 <time>2014-2-21T15:15:25Z</time>
 </wpt>
 <wpt lat="52.41359333333333" lon="-4.046578333333334">
@@ -1224,7 +1224,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:15:29Z</time>
 </wpt>
 <wpt lat="52.413471666666666" lon="-4.047205">
-<ele>117.3</ele>
+<ele>117.2</ele>
 <time>2014-2-21T15:15:30Z</time>
 </wpt>
 <wpt lat="52.413446666666665" lon="-4.0473566666666665">
@@ -1264,7 +1264,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:15:39Z</time>
 </wpt>
 <wpt lat="52.413201666666666" lon="-4.048681666666667">
-<ele>113.1</ele>
+<ele>112.5</ele>
 <time>2014-2-21T15:15:40Z</time>
 </wpt>
 <wpt lat="52.41316833333333" lon="-4.04883">
@@ -1284,7 +1284,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:15:44Z</time>
 </wpt>
 <wpt lat="52.413023333333335" lon="-4.049413333333334">
-<ele>110.4</ele>
+<ele>109.9</ele>
 <time>2014-2-21T15:15:45Z</time>
 </wpt>
 <wpt lat="52.41298333333334" lon="-4.049556666666667">
@@ -1324,7 +1324,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:15:54Z</time>
 </wpt>
 <wpt lat="52.41260666666667" lon="-4.050838333333333">
-<ele>106.6</ele>
+<ele>106.4</ele>
 <time>2014-2-21T15:15:55Z</time>
 </wpt>
 <wpt lat="52.41256333333333" lon="-4.050988333333334">
@@ -1344,7 +1344,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:15:59Z</time>
 </wpt>
 <wpt lat="52.41238166666667" lon="-4.0516016666666665">
-<ele>104.6</ele>
+<ele>103.8</ele>
 <time>2014-2-21T15:16:0Z</time>
 </wpt>
 <wpt lat="52.412333333333336" lon="-4.051758333333333">
@@ -1384,7 +1384,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:16:9Z</time>
 </wpt>
 <wpt lat="52.411903333333335" lon="-4.053181666666666">
-<ele>96.4</ele>
+<ele>95.5</ele>
 <time>2014-2-21T15:16:10Z</time>
 </wpt>
 <wpt lat="52.411855" lon="-4.053341666666666">
@@ -1404,7 +1404,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:16:14Z</time>
 </wpt>
 <wpt lat="52.411675" lon="-4.053966666666667">
-<ele>91.7</ele>
+<ele>90.9</ele>
 <time>2014-2-21T15:16:15Z</time>
 </wpt>
 <wpt lat="52.41163" lon="-4.05411">
@@ -1444,7 +1444,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:16:24Z</time>
 </wpt>
 <wpt lat="52.41131166666667" lon="-4.05472">
-<ele>82.5</ele>
+<ele>82.1</ele>
 <time>2014-2-21T15:16:25Z</time>
 </wpt>
 <wpt lat="52.411271666666664" lon="-4.054665">
@@ -1464,7 +1464,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:16:29Z</time>
 </wpt>
 <wpt lat="52.411143333333335" lon="-4.054438333333334">
-<ele>79.2</ele>
+<ele>78.1</ele>
 <time>2014-2-21T15:16:30Z</time>
 </wpt>
 <wpt lat="52.41114833333334" lon="-4.054361666666667">
@@ -1504,7 +1504,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:16:39Z</time>
 </wpt>
 <wpt lat="52.41120166666666" lon="-4.05369">
-<ele>80.4</ele>
+<ele>80.6</ele>
 <time>2014-2-21T15:16:40Z</time>
 </wpt>
 <wpt lat="52.411155" lon="-4.053608333333333">
@@ -1524,7 +1524,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:16:44Z</time>
 </wpt>
 <wpt lat="52.41097" lon="-4.053273333333333">
-<ele>82.2</ele>
+<ele>82.4</ele>
 <time>2014-2-21T15:16:45Z</time>
 </wpt>
 <wpt lat="52.41093333333333" lon="-4.053206666666667">
@@ -1564,7 +1564,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:16:54Z</time>
 </wpt>
 <wpt lat="52.4106" lon="-4.052601666666667">
-<ele>82.0</ele>
+<ele>82.3</ele>
 <time>2014-2-21T15:16:55Z</time>
 </wpt>
 <wpt lat="52.41055" lon="-4.052515">
@@ -1623,88 +1623,88 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <ele>83.5</ele>
 <time>2014-2-21T15:17:9Z</time>
 </wpt>
-<wpt lat="52.410195" lon="-4.051801666666667">
-<ele>71.41</ele>
+<wpt lat="52.410205" lon="-4.051755">
+<ele>72.08</ele>
 <time>2014-2-21T15:17:10Z</time>
 </wpt>
 <wpt lat="52.410223333333334" lon="-4.051711666666667">
-<ele>72.08</ele>
+<ele>72.31</ele>
 <time>2014-2-21T15:17:11Z</time>
 </wpt>
 <wpt lat="52.41025333333333" lon="-4.0516733333333335">
-<ele>72.31</ele>
+<ele>73.35</ele>
 <time>2014-2-21T15:17:12Z</time>
 </wpt>
 <wpt lat="52.410293333333335" lon="-4.05164">
-<ele>73.35</ele>
+<ele>73.54</ele>
 <time>2014-2-21T15:17:13Z</time>
 </wpt>
 <wpt lat="52.41032166666667" lon="-4.051585">
-<ele>73.54</ele>
+<ele>73.55</ele>
 <time>2014-2-21T15:17:14Z</time>
 </wpt>
-<wpt lat="52.41032166666667" lon="-4.051585">
-<ele>73.55</ele>
+<wpt lat="52.41035333333333" lon="-4.051518333333333">
+<ele>73.95</ele>
 <time>2014-2-21T15:17:15Z</time>
 </wpt>
 <wpt lat="52.41036833333333" lon="-4.051465">
-<ele>73.95</ele>
+<ele>73.63</ele>
 <time>2014-2-21T15:17:16Z</time>
 </wpt>
 <wpt lat="52.410375" lon="-4.05139">
-<ele>73.63</ele>
+<ele>73.14</ele>
 <time>2014-2-21T15:17:17Z</time>
 </wpt>
 <wpt lat="52.410355" lon="-4.051345">
-<ele>73.14</ele>
+<ele>72.64</ele>
 <time>2014-2-21T15:17:18Z</time>
 </wpt>
 <wpt lat="52.410336666666666" lon="-4.051316666666667">
-<ele>72.64</ele>
+<ele>72.18</ele>
 <time>2014-2-21T15:17:19Z</time>
 </wpt>
 <wpt lat="52.41030333333333" lon="-4.051275">
-<ele>72.18</ele>
+<ele>72.44</ele>
 <time>2014-2-21T15:17:20Z</time>
 </wpt>
 <wpt lat="52.41028" lon="-4.051223333333334">
-<ele>72.44</ele>
+<ele>72.17</ele>
 <time>2014-2-21T15:17:21Z</time>
 </wpt>
 <wpt lat="52.410266666666665" lon="-4.051196666666667">
-<ele>72.17</ele>
+<ele>71.71</ele>
 <time>2014-2-21T15:17:22Z</time>
 </wpt>
 <wpt lat="52.41023333333333" lon="-4.051171666666667">
-<ele>71.71</ele>
+<ele>71.26</ele>
 <time>2014-2-21T15:17:23Z</time>
 </wpt>
 <wpt lat="52.410185" lon="-4.051153333333334">
-<ele>71.26</ele>
+<ele>71.32</ele>
 <time>2014-2-21T15:17:24Z</time>
 </wpt>
-<wpt lat="52.410185" lon="-4.051153333333334">
-<ele>71.32</ele>
+<wpt lat="52.41012666666666" lon="-4.051146666666667">
+<ele>70.85</ele>
 <time>2014-2-21T15:17:25Z</time>
 </wpt>
 <wpt lat="52.410085" lon="-4.0511816666666665">
-<ele>70.85</ele>
+<ele>70.61</ele>
 <time>2014-2-21T15:17:26Z</time>
 </wpt>
 <wpt lat="52.410025" lon="-4.051208333333333">
-<ele>70.61</ele>
+<ele>70.19</ele>
 <time>2014-2-21T15:17:27Z</time>
 </wpt>
 <wpt lat="52.409975" lon="-4.05123">
-<ele>70.19</ele>
+<ele>69.16</ele>
 <time>2014-2-21T15:17:28Z</time>
 </wpt>
 <wpt lat="52.409935" lon="-4.051308333333333">
-<ele>69.16</ele>
+<ele>68.78</ele>
 <time>2014-2-21T15:17:29Z</time>
 </wpt>
 <wpt lat="52.40989166666667" lon="-4.051385">
-<ele>77.4</ele>
+<ele>74.9</ele>
 <time>2014-2-21T15:17:30Z</time>
 </wpt>
 <wpt lat="52.40985333333333" lon="-4.051465">
@@ -1744,7 +1744,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:17:39Z</time>
 </wpt>
 <wpt lat="52.40978" lon="-4.0517916666666665">
-<ele>76.1</ele>
+<ele>75.7</ele>
 <time>2014-2-21T15:17:40Z</time>
 </wpt>
 <wpt lat="52.40978333333333" lon="-4.0517900000000004">
@@ -1764,7 +1764,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:17:44Z</time>
 </wpt>
 <wpt lat="52.40978166666667" lon="-4.051783333333334">
-<ele>74.7</ele>
+<ele>74.6</ele>
 <time>2014-2-21T15:17:45Z</time>
 </wpt>
 <wpt lat="52.40978166666667" lon="-4.051783333333334">
@@ -1804,7 +1804,7 @@ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/
 <time>2014-2-21T15:17:54Z</time>
 </wpt>
 <wpt lat="52.40976833333333" lon="-4.051778333333333">
-<ele>73.4</ele>
+<ele>73.2</ele>
 <time>2014-2-21T15:17:55Z</time>
 </wpt>
 <wpt lat="52.40976666666667" lon="-4.051778333333333">

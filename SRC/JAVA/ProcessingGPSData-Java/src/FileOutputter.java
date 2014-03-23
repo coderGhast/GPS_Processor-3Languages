@@ -26,6 +26,7 @@ public class FileOutputter {
      * @param add The String to be added to the XML list.
      */
     public void addToXML(String add){
+        System.out.println("Appending to XML string.");
         sb.append(add);
     }
 

@@ -83,8 +83,6 @@ void SentenceHandler::handle_gpgga(Stream * streamer, stringstream * sentence) {
 
     getline(*sentence, location, ','); /* Elevation */
     streamer->setElevation(location);
-
-    streamer->updateTime(time_string);
 }
 
 /**
