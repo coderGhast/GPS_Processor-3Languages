@@ -24,8 +24,6 @@ public class StreamReader {
             textReader = new BufferedReader(reader);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 

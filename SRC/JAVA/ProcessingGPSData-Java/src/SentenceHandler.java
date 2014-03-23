@@ -72,11 +72,23 @@ public class SentenceHandler {
      * @param sentenceComponents The full sentence.
      */
     private void handleGPGSV(Stream streamer, String[] sentenceComponents){
+        /**
+         * Looks to see if this is the first sentence of the current group. If it
+         * is, then the amounts of SNR are reset.
+         */
         if(sentenceComponents[2].equals("1")){
             streamer.set35AndAboveSNR(0);
             streamer.setSignalsBetween30And35(0);
         }
         String snr;
+        /**
+         * For all of the amounts of Satellites and SNR in the sentence,
+         * go through and send them to be added into the Stream. First
+         * check that they are not the last of the line, by looking
+         * for the asterisk of the check sum.
+         *
+         * If the asterisk is there, get everything from before it.
+         */
         for(int i = 7; i < sentenceComponents.length; i+=4){
             snr = sentenceComponents[i];
             if(snr.contains("*")){
