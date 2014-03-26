@@ -1,0 +1,235 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Structured General Purpose Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage{caption}
+\usepackage{float}
+\usepackage{url}
+\usepackage{subcaption}
+
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+\chead{\hmwkClass\ \hmwkTitle} % Top center header
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+   
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{"Where Have I Been?" - Languages Comparison} % Assignment title
+\newcommand{\hmwkDueDate}{Friday,\ April\ 11,\ 2014} % Due date
+\newcommand{\hmwkClass}{CS\ 22510} % Course/class
+\newcommand{\hmwkAuthorName}{James Euesden - jee22} % Your name
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName}}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\setlength\parindent{24pt}
+
+\begin{document}
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+\newpage
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+% To have just one problem per page, simply put a \clearpage after each problem
+
+\section{Introduction}
+This document is the second part (Assignment 2\cite{assignment}) of the "Where have I been?" assignment. In this report, I will discuss the languages and my experiences with them. While the first part (Assignment 1) was about the programming for GPS Processing, this is about the differences and similarities between them. What I found useful, or difficult, between the languages, any libraries I may have chosen to use, and what language I felt was best suited to the task.
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGE COMPARISONS
+%----------------------------------------------------------------------------------------
+
+\section{Language Comparisons}
+
+\subsection{Brief}
+
+I chose to begin programming in Java, mainly because it is the language I have written in the most and so felt the most comfortable with tackling a new problem, and the NMEA 0183 format, which I was unfamiliar with. Java has enough support from the Java API that it was relatively simple to create the application once I had come to grips with NMEA 0183 and formed the structure of the application in my mind.
+
+Using C was also relatively simple, and the use of pointers to the data I was manipulating (using a struct to represent a stream), quite literally streamlined my application's data flow (if you can ignore the pun). The simplicity of writing in C, when it comes to passing items to a function, helped me consider the problem in a way that actually made me think of the simplest way of writing the application. This was to the point that I refactored some of my Java code after writing the C application because of better design choices, brought on by how simplistic writing in C was. I could say that this is a hinderance of Java. In that, while there are a lot of great features from the API and with Object Oriented programs, I found my original program structure and design to be much more than was necessary.
+
+Writing in C++ was an interesting experience, as it combined the simplicity and control over the data that C has, with the benefits of Object Oriented programming. Making items into Objects, in both Java and C++, made creating my methods and variables a lot cleaner than in C due to the inherant ideaology behind keeping things as 'Objects'. This lead to taking some of the abstraction out of the functional type programming in C, and into encapsulating data and methods that logically make sense together.
+
+\subsection{File Input/Output}
+
+\subsection{Accessing Data}
+
+\subsection{Date \& Time}
+
+For both C and C++ I used the 'time' library\cite{time}, and for Java used the Calendar class. I found the Calendar class cumbersome to use and in some ways hindered my programming. On the otherhand, using the time library was perfect for checking the timestamps between sentences, comparing them, creating new timestamps from sentence data and even updating a timestamp with new sentence data without a date. 
+
+When programming in Java and using Calendar, making a new time with the date and time provided by a sentence was fine. When it came to updating a time without a provided date, it became much more difficult to do. My method for handling this in all three languages was similar. Just use the most recent date provided (potential pitfall for the application's future use where the time passes 00:00. This could be rectified in a future edition). 
+
+This was simple to do in C and C++, with simply turning the time\_t struct back into a tm struct, updating the values and then using mktime() to get it back to time\_t. While the process with Calendar is similar, I found that I had trouble getting the time to be correct, with milliseconds assigned randomly, and needing to use .clone() to get correct values for the date.
+
+
+
+
+%-------------------------------------------- Compare/Contrast. Amount of code written, the clarity of code, any features that helped/hindered the representation of my solution.
+
+
+
+%----------------------------------------------------------------------------------------
+%	LIBRARIES
+%----------------------------------------------------------------------------------------
+
+\section{Libraries}
+
+Boost
+
+NMEA parsing
+
+%-------------------------------------------- What Libraries could I have used? How could they have helped?
+
+%----------------------------------------------------------------------------------------
+%	SUITABILITY
+%----------------------------------------------------------------------------------------
+
+\section{Suitability}
+
+All good. C++ best.
+
+%-------------------------------------------- Which Language was best for the task set, and why?
+
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+\clearpage
+
+\section{Conclusion}
+
+
+%----------------------------------------------------------------------------------------
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{1}
+
+%---- \bibitem{assignment} D. Price and F. Long, "For those in Peril on the Sea.", CS23710 Assessed Assignment 2013-2014, November 11 2013
+
+%---- \bibitem{ctime} ctime - cppreference, {\em cppreference},[online], http://en.cppreference.com/w/c/chrono/ctime (Accessed:10/12/2013)
+
+\end{thebibliography}
+
+
+\end{document}
+
+
