@@ -1,11 +1,12 @@
 \contentsline {section}{Introduction}{3}
 \contentsline {section}{Language Comparisons}{3}
-\contentsline {subsection}{File Operations}{3}
-\contentsline {subsection}{Data Accessibility \& Manipulation}{3}
-\contentsline {subsection}{Date \& Time}{3}
-\contentsline {section}{Libraries}{4}
-\contentsline {subsection}{NMEA parsing}{4}
-\contentsline {subsection}{C++: Boost}{4}
-\contentsline {subsection}{Java: DocumentBuilder \& XML Builders}{4}
-\contentsline {section}{Suitability}{5}
-\contentsline {section}{Conclusion}{6}
+\contentsline {subsubsection}{Code Clarity}{3}
+\contentsline {subsubsection}{File Operations}{4}
+\contentsline {subsubsection}{Data Accessibility \& Manipulation}{4}
+\contentsline {subsubsection}{Memory Allocation}{5}
+\contentsline {subsubsection}{Date \& Time}{5}
+\contentsline {section}{Libraries}{5}
+\contentsline {subsubsection}{NMEA parsing}{5}
+\contentsline {subsubsection}{C++: Boost}{5}
+\contentsline {subsubsection}{Java: DocumentBuilder \& XML Builders}{6}
+\contentsline {section}{Conclusion \& Suitability}{6}
