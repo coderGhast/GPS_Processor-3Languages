@@ -171,6 +171,10 @@ An example would be the file operations in Java vs C, where it takes more for C 
 
 In all three languages, the file input and output was relatively simple and similar. With Java, I had a slight difference in that on every update of a timestamp I output the XML into a StringBuilder, and then output the full String at the very end of the application. While with the C and C++, I output directly to the file when a timestamp was updated. This was made very easy through the use of pointers to the FILE, and keeping a reference to the class for the file operations.
 
+\subsection{Data Accessibility \& Manipulation}
+
+With Java and C++ having objects rather than simple source files with functions and variables, it was fantastic to be able to put a variable as private, and restrict access to it from outside of the class except through the defined use of getters and setters. While something similar can be done
+
 \subsection{Date \& Time}
 
 For both C and C++ I used the 'time' library\cite{time}, and for Java used the Calendar class. I found the Calendar class cumbersome to use and in some ways hindered my programming. On the otherhand, using the time library was perfect for checking the timestamps between sentences, comparing them, creating new timestamps from sentence data and even updating a timestamp with new sentence data without a date. 
