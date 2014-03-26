@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  25 MAR 2014 23:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  26 MAR 2014 19:25
 entering extended mode
 **D:/Users/James/University*Documents/Modules/CS225/GPS_Processor-3Languages/DO
 CS/Where*Have*I*Been*-*Languages*Comparison.tex
@@ -177,18 +177,36 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Warning: Citation `assignment' on page 3 undefined on input line 149.
 
+<img/percentages.png, id=12, 793.96625pt x 51.19125pt>
+File: img/percentages.png Graphic file (type png)
 
-LaTeX Warning: Citation `time' on page 3 undefined on input line 172.
+<use img/percentages.png>
+Package pdftex.def Info: img/percentages.png used on input line 163.
+(pdftex.def)             Requested size: 469.75499pt x 30.28848pt.
 
-[3] [4] [5
+
+LaTeX Warning: Citation `time' on page 3 undefined on input line 178.
+
+[3 <D:/Users/James/University Documents/Modules/CS225/GPS_Processor-3Languages/
+DOCS/img/percentages.png>]
+
+LaTeX Warning: Citation `nmeajava' on page 4 undefined on input line 200.
+
+
+LaTeX Warning: Citation `nmeacplusplus' on page 4 undefined on input line 200.
+
+
+LaTeX Warning: Citation `boost' on page 4 undefined on input line 203.
+
+[4] [5] [6
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 230.
+LaTeX Warning: Empty `thebibliography' environment on input line 245.
 
 
 AED: lastpage setting LastPage
-[6
+[7
 
 ]
 ("D:\Users\James\University Documents\Modules\CS225\GPS_Processor-3Languages\DO
@@ -198,21 +216,21 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2559 strings out of 493921
- 39926 string characters out of 3144875
- 100249 words of memory out of 3000000
- 5864 multiletter control sequences out of 15000+200000
+ 2575 strings out of 493921
+ 40152 string characters out of 3144875
+ 101249 words of memory out of 3000000
+ 5877 multiletter control sequences out of 15000+200000
  8501 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,11n,43p,939b,236s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,10n,43p,939b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on "Where Have I Been - Languages Comparison.pdf" (6 pages, 7382
-7 bytes).
+Output written on "Where Have I Been - Languages Comparison.pdf" (7 pages, 8222
+2 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
+ 44 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -155,17 +155,21 @@ This document is the second part (Assignment 2\cite{assignment}) of the "Where h
 
 \section{Language Comparisons}
 
-\subsection{Brief}
+The amount of code between each language was rather similar. I used GitHub to keep track of my code and the versions of it as I completed part one of the assignment. One of the benefits of doing this was that it provided a great break down of how much percentage of the repo was taken up by the different components (screenshot taken before this document was added to the repository):
 
-I chose to begin programming in Java, mainly because it is the language I have written in the most and so felt the most comfortable with tackling a new problem, and the NMEA 0183 format, which I was unfamiliar with. Java has enough support from the Java API that it was relatively simple to create the application once I had come to grips with NMEA 0183 and formed the structure of the application in my mind.
+\begin{figure}[h!]
+  \caption{The percentage of languages on the GitHub repo for part 1.}
+  \centering
+    \includegraphics[width=1\textwidth]{img/percentages}
+\end{figure}
 
-Using C was also relatively simple, and the use of pointers to the data I was manipulating (using a struct to represent a stream), quite literally streamlined my application's data flow (if you can ignore the pun). The simplicity of writing in C, when it comes to passing items to a function, helped me consider the problem in a way that actually made me think of the simplest way of writing the application. This was to the point that I refactored some of my Java code after writing the C application because of better design choices, brought on by how simplistic writing in C was. I could say that this is a hinderance of Java. In that, while there are a lot of great features from the API and with Object Oriented programs, I found my original program structure and design to be much more than was necessary.
+The figure shows that the amount of code for each language that I wrote was very similar. I feel the reason C++ has more code than the other two may be due to each class having a Constructor, a Destructor and a Copy Constructor, whether they were used or not. With this in mind, it should be apparent that my writing of the application in each language was very similar, and while one particular section may take more code than another, that same language may do something much simpler than in another too.
 
-Writing in C++ was an interesting experience, as it combined the simplicity and control over the data that C has, with the benefits of Object Oriented programming. Making items into Objects, in both Java and C++, made creating my methods and variables a lot cleaner than in C due to the inherant ideaology behind keeping things as 'Objects'. This lead to taking some of the abstraction out of the functional type programming in C, and into encapsulating data and methods that logically make sense together.
+An example would be the file operations in Java vs C, where it takes more for C to handle getting the data out of the file and char arrays than in Java. Opposite to this, my C program handles date and time much easier and with less code than that used in Java for the most part. Overall, I found the simplicity of C and C++ help me in writing the code in the most simplest way I could think of. A huge benefit over Java, where I sometimes felt I was writing bloated code that was unnecessary (and later refactored out).
 
-\subsection{File Input/Output}
+\subsection{File Operations}
 
-\subsection{Accessing Data}
+In all three languages, the file input and output was relatively simple and similar. With Java, I had a slight difference in that on every update of a timestamp I output the XML into a StringBuilder, and then output the full String at the very end of the application. While with the C and C++, I output directly to the file when a timestamp was updated. This was made very easy through the use of pointers to the FILE, and keeping a reference to the class for the file operations.
 
 \subsection{Date \& Time}
 
@@ -188,9 +192,16 @@ This was simple to do in C and C++, with simply turning the time\_t struct back 
 
 \section{Libraries}
 
-Boost
+I chose not to use any libraries outside of those provided with the standard API of the native languages. Below are those libraries that I could have used, why they could have been useful, and why I didn't use them.
 
-NMEA parsing
+\subsection{NMEA parsing}
+For all three languages there are libraries that I could have used in order to parse the NMEA sentences into data, without me having to dissect them myself and extract the data\cite{nmeajava}\cite{nmeacplusplus}. However, I chose not to use any of these. My main reason for this is that I wanted to understand the sentences myself, and to only extract the data I wanted and then discard them, rather than extract all data from the sentences. On a larger project that intended to use the majority of data from the NMEA sentences, I would look into using one of these open source libraries to save time. For my own assignment in my own work, I felt that it was acceptable to not use these.
+
+\subsection{C++: Boost}
+There is a library for C++ called Boost\cite{boost}. This library provides many useful functions for C++ that aren't in the native language. A number of these could be have been useful for manipulating strings, and saved me time and code. However, as with the NMEA 0813 sentences, for an assignment of this size I would rather use my own code and work through the problem to better my understanding of C++. Boost is a useful library that I will remember for future, larger, projects where their functions may be invaluable in saving me time and effort.
+
+\subsection{Java: DocumentBuilder \& XML Builders}
+While not an additional library, Java has the use for classes such as DocumentBuilder, which can XML tag a file (UTF-8) for us. Again, I chose not to use this, and provided my own methods for putting tags around the data. This is partially because of tags such as "<wpt lat="" lon=""> where it is a tag built up of multiple components I found easier to do myself, and also because of the size and amount of XML tags being output. If the applications were required to output a larger variety of XML tags, I may have found it useful to find XML Builders. For what the problem consisted of, I felt it was easy enough to do it myself, and to further my understanding of building XML files in my programming.
 
 %-------------------------------------------- What Libraries could I have used? How could they have helped?
 
@@ -200,7 +211,9 @@ NMEA parsing
 
 \section{Suitability}
 
-All good. C++ best.
+In terms of what language is best suited for writing this application, I would say that a lot of it comes down to personal opinion. I found all three languages had their challenges or parts that aided me, and so each of them is relatively suitable for this process. 
+
+However, out of all of them I felt that C++  was the most suitable for my implementation. My justification for this is that I found it the easiest and quickest to write in. The functions are all relatively simplistic, it has the simplicity of C, while providing the bonuses of Object Oriented programming like in Java. The fact that C++ has access to it's own libraries and functions, while also having access to those provided in C, made C++ an joy to write the application in.
 
 %-------------------------------------------- Which Language was best for the task set, and why?
 
