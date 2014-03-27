@@ -8,5 +8,5 @@
 \contentsline {section}{Libraries}{5}
 \contentsline {subsubsection}{NMEA parsing}{5}
 \contentsline {subsubsection}{C++: Boost}{5}
-\contentsline {subsubsection}{Java: DocumentBuilder \& XML Builders}{6}
+\contentsline {subsubsection}{XML Builders}{6}
 \contentsline {section}{Conclusion \& Suitability}{6}
