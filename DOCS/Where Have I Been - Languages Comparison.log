@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  27 MAR 2014 00:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  27 MAR 2014 01:28
 entering extended mode
 **D:/Users/James/University*Documents/Modules/CS225/GPS_Processor-3Languages/DO
 CS/Where*Have*I*Been*-*Languages*Comparison.tex
@@ -197,19 +197,36 @@ Package pdftex.def Info: img/latitudejava.png used on input line 185.
 /DOCS/img/percentages.png>] [4 <D:/Users/James/University Documents/Modules/CS2
 25/GPS_Processor-3Languages/DOCS/img/latitude.png> <D:/Users/James/University D
 ocuments/Modules/CS225/GPS_Processor-3Languages/DOCS/img/latitudejava.png>]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 235.
 
-LaTeX Warning: Citation `javaxml' on page 5 undefined on input line 237.
 
-[5] [6]
-Underfull \hbox (badness 5475) in paragraph at lines 266--267
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 235.
+ [5] [6]
+Underfull \hbox (badness 2189) in paragraph at lines 264--265
 []\OT1/cmr/m/n/10 ctime - cp-pref-er-ence, \OT1/cmr/m/it/10 cp-pref-er-ence\OT1
-/cmr/m/n/10 ,[online], http://en.cppreference.com/w/c/chrono/ctime (Ac-
+/cmr/m/n/10 , [on-line], http://en.cppreference.com/w/c/chrono/ctime (Ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
+[]\OT1/cmr/m/n/10 GregorianCalendar (Java Plat-form SE 7), \OT1/cmr/m/it/10 doc
+s.oracle\OT1/cmr/m/n/10 , [on-line],
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 270--271
 []\OT1/cmr/m/n/10 NMEA Java li-brary, \OT1/cmr/m/it/10 nmealib.sourceforge\OT1/
-cmr/m/n/10 ,[online], http://nmealib.sourceforge.net/ (Ac-
+cmr/m/n/10 , [on-line], http://nmealib.sourceforge.net/ (Ac-
+ []
+
+
+Overfull \hbox (2.61678pt too wide) in paragraph at lines 278--279
+[]\OT1/cmr/m/n/10 DocumentBuilder (Java Plat-form SE 7), \OT1/cmr/m/it/10 docs.
+oracle\OT1/cmr/m/n/10 , [on-line], http://docs.oracle.com/javase/7/docs/api/
  []
 
 
@@ -218,28 +235,26 @@ AED: lastpage setting LastPage
 
 ]
 ("D:\Users\James\University Documents\Modules\CS225\GPS_Processor-3Languages\DO
-CS\Where Have I Been - Languages Comparison.aux")
-
-LaTeX Warning: There were undefined references.
-
- ) 
+CS\Where Have I Been - Languages Comparison.aux") ) 
 Here is how much of TeX's memory you used:
- 2605 strings out of 493921
- 40655 string characters out of 3144875
+ 2622 strings out of 493921
+ 40956 string characters out of 3144875
  101249 words of memory out of 3000000
- 5904 multiletter control sequences out of 15000+200000
+ 5918 multiletter control sequences out of 15000+200000
  8847 words of font info for 31 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,10n,43p,900b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "Where Have I Been - Languages Comparison.pdf" (7 pages, 1372
-99 bytes).
+ 36i,10n,43p,1002b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Where Have I Been - Languages Comparison.pdf" (7 pages, 1442
+64 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

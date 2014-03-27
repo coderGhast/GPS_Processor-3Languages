@@ -198,19 +198,17 @@ In all three languages, the file input and output was relatively simple and simi
 
 With Java and C++ having objects rather than simple source files with functions and variables, I was able to put a variable as private, and restrict access to it from outside of the class except through the use of defined getters and setters. Data is relatively easy to access in C, and it isn't as secure as setting something as private. In this regard, C lets itself down in that it is not 'open for extension, closed for modification' when data is in a struct that has been included in a file. This can lead to future developers circumventing the way that the original programmer intended data to be accessed, should this application be built upon in the future.
 
-In terms of manipulating the data, there were generally no problems. The only issues I encountered were in C and C++, when I had to remember to set values to something before allowing them to be used/compared with something, in the off chance that they had not been initialized to 0 or null, and instead contained data from elsewhere. While not a huge hinderence to program, it sometimes made debugging provide very interesting results if I had forgotten to do this.
+In terms of manipulating the data, there were generally no problems. The only issues I encountered were in C and C++, when I had to remember to set values to something before allowing them to be used/compared with, in the off chance that they had not been initialized to 0 or null, and instead contained data from elsewhere. While not a huge hinderence to program, it sometimes made debugging provide very unpredictable, interesting, strange and obscure results if I had forgotten to do this.
 
 \subsubsection{Memory Allocation}
 
-It was useful to have the 'garbage collection' in Java, saving me from having to use free() and delete(). In C and C++ I had to trace the bits of memory to where they should correctly end and remove them appropriately, without accidentally causing the application's memory to lose it's integrity with a double free situation. On the other hand, the freedom of allocating and freeing memory gave me much more control over how data was stored in the applications. While the applications were only small and so didn't take up too much memory, it is something that I will be keeping in mind for future applications where I have a choice of language and want to be memory space conscious.
+It was useful to have the 'garbage collection' in Java, saving me from having to use free() and delete() and keep track of the memory control. While in C and C++ I had to trace the bits of memory to where they should correctly end and remove them appropriately, without accidentally causing the application's memory to lose it's integrity with a double free situation. While this could be considered an inconvenience, the freedom of allocating and freeing memory gave me much more control over how data was stored in the applications. While the applications were only small and so didn't take up too much memory, it is something that I will be keeping in mind for future applications where I have a choice of language and want to be memory space conscious.
 
 \subsubsection{Date \& Time}
 
-For both C and C++ I used the 'time' library\cite{ctime}, and for Java used the Calendar\cite{calendar} class. I found the Calendar class cumbersome to use and in some ways hindered my programming. On the other hand, using the time library was perfect for comparing timestamps, creating new timestamps from sentence data and even updating a timestamp with new sentence data without a date. 
+For both C and C++ I used the 'time' library\cite{ctime}, and for Java used the Calendar\cite{calendar} abstract class with GregorianCalendar\cite{gregcalendar}. I found the Calendar class cumbersome to use and in some ways hindered my programming. On the other hand, using the time library was perfect for comparing timestamps, creating new timestamps from sentence data and even updating a timestamp with new sentence data without a date.
 
-When programming in Java and using Calendar, updating the date and time provided by a sentence with both date and time was fine. However, when it came to updating a time without a provided date, it became much more difficult to do and I spent a good while writing and re-writing code to use an older Calendar object to create a new one with the updated time.
-
-In C and C++, this was simple to do by turning the most recent time\_t struct back into a tm struct, updating the values and then using mktime() to get it back to time\_t. While the process with Calendar ended up quite similar, I found that I had trouble getting the time to be correct, with milliseconds assigned randomly, and needing to use .clone() to get correct values for the date, which slowed down my progress when writing the Java application.
+In C and C++, this was simple to use by turning the most recent time\_t struct back into a tm struct, updating the values and then using mktime() to get it back to time\_t. While the process with Calendar ended up quite similar, I found that I had trouble getting the time to be correct, with milliseconds assigned randomly, and needing to use .clone() to get correct values for the date, which slowed down my progress when writing the Java application.
 
 
 
@@ -228,13 +226,13 @@ In C and C++, this was simple to do by turning the most recent time\_t struct ba
 I chose not to use any libraries outside of those provided with the standard API of the native languages. Below are some libraries that I could have used, why they could have been useful, and why I didn't use them.
 
 \subsubsection{NMEA parsing}
-For all three languages there are libraries that I could have used in order to parse the NMEA sentences into data, without having to dissect and extract the data\cite{nmeajava}\cite{nmeacplusplus} myself. However, I chose not to use any of these. My main reason for this is that I wanted to understand the sentences myself, and to only extract the data I wanted and then discard them, rather than extract all data from the sentences. On a larger project that intended to use the majority of data from the NMEA sentences, I would look into using one of these open source libraries to save time. For my own assignment in my own work, I felt that it was acceptable to not use these.
+For all three languages there are libraries\cite{nmeajava}\cite{nmeacplusplus} that I could have used in order to parse the NMEA sentences into data, without having to dissect and extract the data myself. However, I chose not to use any of these. My main reasons for this are that I wanted to understand the sentences, to only extract the specific data I wanted and then discard them. On a larger project that might use the majority of data from the NMEA sentences, I would look into using one of these open source libraries to save time. For this small assignment in my own work, I felt that it was acceptable to not use these.
 
 \subsubsection{C++: Boost}
-There is a library for C++ called Boost\cite{boost}. This library provides many useful functions for C++ that aren't in the native language. A number of these could be have been useful for manipulating strings, and saved me time and code. However, as with the NMEA 0813 sentences, for an assignment of this size I would rather use my own code and work through the problem to better my understanding of C++. Boost is a useful library that I will remember for future projects where their functions may be invaluable in saving me time and effort.
+There is a library for C++ called Boost\cite{boost}. This library provides many useful functions for C++ that aren't in the native language. A number of these could be have been useful, e.g. for manipulating strings, and saved me time and code. However, as with the NMEA 0813 sentences, for an assignment of this size I would rather use my own code and work through the problem to better my understanding of C++. Boost is a useful library that I will remember for future projects where their functions may be invaluable in saving me time and effort.
 
 \subsubsection{XML Builders}
-While not an additional library, Java has the use for classes such as DocumentBuilder\cite{javaxml}\cite{documentbuilder}, which can XML tag a file (UTF-8) for us. Again, I chose not to use this, and provided my own methods for putting tags around the data. This is partially because of tags such as "<wpt lat="" lon=""> where it is a tag built up of multiple components I found easier to do myself, and also because of the size and amount of XML tags being output being so little. If the applications were required to output a larger variety of XML tags, I may have found it useful to find XML Builders. For what the problem consisted of, I felt it was easy enough to do it myself, and to further my understanding of building XML files in my programming.
+While not an additional library, Java has the use for classes such as DocumentBuilder\cite{javaxml}\cite{documentbuilder}, which can XML tag a file (UTF-8) for us. Again, I chose not to use these, and provided my own methods for putting tags around the data. This is partially because of tags such as \textless wpt lat="" lon=""\textgreater , where it is a tag built up of multiple components, I found easier to do myself, and also because of the size and amount of XML tags being output being so little. If the applications were required to output a larger variety of XML tags, I may have found it useful to find and use XML Builders. For what the problem consisted of, I felt it was easy enough to do it myself, and to further my understanding of building XML files in my programming.
 
 %-------------------------------------------- What Libraries could I have used? How could they have helped?
 
@@ -246,7 +244,7 @@ While not an additional library, Java has the use for classes such as DocumentBu
 \section{Conclusion \& Suitability}
 In terms of what language is best suited for writing this application, I would say that a lot of it comes down to personal opinion. I found all three languages had their challenges or parts that aided me, and so each of them is acceptably suitable for this process. 
 
-However, if I had to choose, I felt that C++  was the most suitable for my implementation. My justification for this is that I found it the easiest and quickest to write in. The methods are all relatively simplistic. it has the simplicity of C, while providing the bonuses of Object Oriented programming. The fact that C++ has access to it's own libraries and functions, while also having access to those provided in C, made C++ a joy to write the application in with ease. Adding to this that there are libraries like Boost and NMEA parsers, and it becomes clear to me that C++ is perhaps the most suited for this application out of all in my opinion.
+However, if I had to choose, I felt that C++  was the most suitable for my implementation. My justification for this is that I found it the easiest and quickest to write in. The methods are all relatively simplistic. It has the simplicity of C, while providing the bonuses of Object Oriented programming. The fact that C++ has access to it's own libraries and functions, while also having access to those provided in C, made C++ a joy to write the application in with ease. Adding to this that there are libraries like Boost and NMEA parsers, and it becomes clear to me that C++ is perhaps the most suited for this application out of all, in my opinion.
 
 %----------------------------------------------------------------------------------------
 \clearpage
@@ -261,21 +259,23 @@ However, if I had to choose, I felt that C++  was the most suitable for my imple
 
 \bibitem{assignment1} F. Labrosse and J. Bell, "Where have I been? - processing GPS data", CS22510 assignment 1 - Version 2, March 18 2014 (original: February 24 2014)
 
-\bibitem{github} coderGhast - James, {\em GitHub},[online], https://github.com/coderGhast (Accessed:27/03/2014)
+\bibitem{github} coderGhast - James, {\em GitHub}, [online], https://github.com/coderGhast (Accessed:27/03/2014)
 
-\bibitem{ctime} ctime - cppreference, {\em cppreference},[online], http://en.cppreference.com/w/c/chrono/ctime (Accessed:27/03/2014)
+\bibitem{ctime} ctime - cppreference, {\em cppreference}, [online], http://en.cppreference.com/w/c/chrono/ctime (Accessed:27/03/2014)
 
-\bibitem{calendar} Calendar (Java Platform SE 7), {\em docs.oracle},[online], http://docs.oracle.com/javase/7/docs/api/java/ util/Calendar.html (Accessed:27/03/2014)
+\bibitem{calendar} Calendar (Java Platform SE 7), {\em docs.oracle}, [online], http://docs.oracle.com/javase/7/docs/api/java/ util/Calendar.html (Accessed:27/03/2014)
 
-\bibitem{nmeajava} NMEA Java library, {\em nmealib.sourceforge},[online], http://nmealib.sourceforge.net/ (Accessed:27/03/2014)
+\bibitem{gregcalendar} GregorianCalendar (Java Platform SE 7), {\em docs.oracle}, [online], http://docs.oracle.com/javase/7/docs/api/java/ util/GregorianCalendar.html (Accessed:27/03/2014)
 
-\bibitem{nmeacplusplus} NMEA library, {\em nmea.sourceforge},[online], http://nmea.sourceforge.net/ (Accessed:27/03/2014)
+\bibitem{nmeajava} NMEA Java library, {\em nmealib.sourceforge}, [online], http://nmealib.sourceforge.net/ (Accessed:27/03/2014)
 
-\bibitem{boost} Boost C++ Libraries, {\em boost},[online], http://www.boost.org/ (Accessed:27/03/2014)
+\bibitem{nmeacplusplus} NMEA library, {\em nmea.sourceforge}, [online], http://nmea.sourceforge.net/ (Accessed:27/03/2014)
 
-\bibitem{javaxmlr} How to create XML file in Java - (DOM parser), {\em mkyong},[online], http://www.mkyong.com/java/how-to-create-xml-file-in-java-dom/ (Accessed:27/03/2014)
+\bibitem{boost} Boost C++ Libraries, {\em boost}, [online], http://www.boost.org/ (Accessed:27/03/2014)
 
-\bibitem{documentbuilder} DocumentBuilder (Java Platform SE 7), {\em docs.oracle},[online], http://docs.oracle.com/javase/7/docs/api/ javax/xml/parsers/DocumentBuilder.html (Accessed:27/03/2014)
+\bibitem{javaxml} How to create XML file in Java - (DOM parser), {\em mkyong}, [online], http://www.mkyong.com/java/how-to-create-xml-file-in-java-dom/ (Accessed:27/03/2014)
+
+\bibitem{documentbuilder} DocumentBuilder (Java Platform SE 7), {\em docs.oracle}, [online], http://docs.oracle.com/javase/7/docs/api/ javax/xml/parsers/DocumentBuilder.html (Accessed:27/03/2014)
 
 \end{thebibliography}
 
