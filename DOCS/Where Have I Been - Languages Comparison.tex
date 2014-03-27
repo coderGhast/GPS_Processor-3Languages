@@ -155,7 +155,7 @@ This document is the second part (Assignment 2\cite{assignment2}) of the "Where 
 
 \section{Language Comparisons}
 
-The amount of code between each language was rather similar. I used GitHub to keep track of my code and the versions of it as I completed part one of the assignment. One of the benefits of doing this was that it provided a great break down of how much percentage of the repo was taken up by the different languages (screenshot taken before this document was added to the repository):
+The amount of code between each language was rather similar. I used GitHub\cite{github} to keep track of my code and the versions of it as I completed part one of the assignment. One of the benefits of doing this was that it provided a great break down of how much percentage of the repo was taken up by the different languages (screenshot taken before this document was added to the repository):
 
 \begin{figure}[h!]
   \centering
@@ -206,7 +206,7 @@ It was useful to have the 'garbage collection' in Java, saving me from having to
 
 \subsubsection{Date \& Time}
 
-For both C and C++ I used the 'time' library\cite{time}, and for Java used the Calendar\cite{calendar} class. I found the Calendar class cumbersome to use and in some ways hindered my programming. On the other hand, using the time library was perfect for comparing timestamps, creating new timestamps from sentence data and even updating a timestamp with new sentence data without a date. 
+For both C and C++ I used the 'time' library\cite{ctime}, and for Java used the Calendar\cite{calendar} class. I found the Calendar class cumbersome to use and in some ways hindered my programming. On the other hand, using the time library was perfect for comparing timestamps, creating new timestamps from sentence data and even updating a timestamp with new sentence data without a date. 
 
 When programming in Java and using Calendar, updating the date and time provided by a sentence with both date and time was fine. However, when it came to updating a time without a provided date, it became much more difficult to do and I spent a good while writing and re-writing code to use an older Calendar object to create a new one with the updated time.
 
@@ -234,7 +234,7 @@ For all three languages there are libraries that I could have used in order to p
 There is a library for C++ called Boost\cite{boost}. This library provides many useful functions for C++ that aren't in the native language. A number of these could be have been useful for manipulating strings, and saved me time and code. However, as with the NMEA 0813 sentences, for an assignment of this size I would rather use my own code and work through the problem to better my understanding of C++. Boost is a useful library that I will remember for future projects where their functions may be invaluable in saving me time and effort.
 
 \subsubsection{XML Builders}
-While not an additional library, Java has the use for classes such as DocumentBuilder, which can XML tag a file (UTF-8) for us. Again, I chose not to use this, and provided my own methods for putting tags around the data. This is partially because of tags such as "<wpt lat="" lon=""> where it is a tag built up of multiple components I found easier to do myself, and also because of the size and amount of XML tags being output being so little. If the applications were required to output a larger variety of XML tags, I may have found it useful to find XML Builders. For what the problem consisted of, I felt it was easy enough to do it myself, and to further my understanding of building XML files in my programming.
+While not an additional library, Java has the use for classes such as DocumentBuilder\cite{javaxml}\cite{documentbuilder}, which can XML tag a file (UTF-8) for us. Again, I chose not to use this, and provided my own methods for putting tags around the data. This is partially because of tags such as "<wpt lat="" lon=""> where it is a tag built up of multiple components I found easier to do myself, and also because of the size and amount of XML tags being output being so little. If the applications were required to output a larger variety of XML tags, I may have found it useful to find XML Builders. For what the problem consisted of, I felt it was easy enough to do it myself, and to further my understanding of building XML files in my programming.
 
 %-------------------------------------------- What Libraries could I have used? How could they have helped?
 
@@ -255,11 +255,27 @@ However, if I had to choose, I felt that C++  was the most suitable for my imple
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-%---- \bibitem{assignment} D. Price and F. Long, "For those in Peril on the Sea.", CS23710 Assessed Assignment 2013-2014, November 11 2013
+\bibitem{assignment2} F. Labrosse and J. Bell, "Where have I been? - languages comparison", CS22510 assignment 2, February 24 2014
 
-%---- \bibitem{ctime} ctime - cppreference, {\em cppreference},[online], http://en.cppreference.com/w/c/chrono/ctime (Accessed:10/12/2013)
+\bibitem{assignment1} F. Labrosse and J. Bell, "Where have I been? - processing GPS data", CS22510 assignment 1 - Version 2, March 18 2014 (original: February 24 2014)
+
+\bibitem{github} coderGhast - James, {\em GitHub},[online], https://github.com/coderGhast (Accessed:27/03/2014)
+
+\bibitem{ctime} ctime - cppreference, {\em cppreference},[online], http://en.cppreference.com/w/c/chrono/ctime (Accessed:27/03/2014)
+
+\bibitem{calendar} Calendar (Java Platform SE 7), {\em docs.oracle},[online], http://docs.oracle.com/javase/7/docs/api/java/ util/Calendar.html (Accessed:27/03/2014)
+
+\bibitem{nmeajava} NMEA Java library, {\em nmealib.sourceforge},[online], http://nmealib.sourceforge.net/ (Accessed:27/03/2014)
+
+\bibitem{nmeacplusplus} NMEA library, {\em nmea.sourceforge},[online], http://nmea.sourceforge.net/ (Accessed:27/03/2014)
+
+\bibitem{boost} Boost C++ Libraries, {\em boost},[online], http://www.boost.org/ (Accessed:27/03/2014)
+
+\bibitem{javaxmlr} How to create XML file in Java - (DOM parser), {\em mkyong},[online], http://www.mkyong.com/java/how-to-create-xml-file-in-java-dom/ (Accessed:27/03/2014)
+
+\bibitem{documentbuilder} DocumentBuilder (Java Platform SE 7), {\em docs.oracle},[online], http://docs.oracle.com/javase/7/docs/api/ javax/xml/parsers/DocumentBuilder.html (Accessed:27/03/2014)
 
 \end{thebibliography}
 
